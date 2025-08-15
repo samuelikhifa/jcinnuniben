@@ -5,8 +5,6 @@ import {
   Grid, List
 } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
-// import OptimizedImage from '../../components/OptimizedImage';
-import { jciImages } from '../../utils/images';
 import pg1 from "../../assets/Images/Gallery/pg1.webp";
 import pg2 from "../../assets/Images/Gallery/pg2.webp";
 import eko from "../../assets/Images/Gallery/eko.jpg";
