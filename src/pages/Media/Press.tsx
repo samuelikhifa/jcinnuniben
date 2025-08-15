@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Calendar, Clock, User, Search, Download, Share2, Eye, Globe, Award, Users, Target, ChevronDown, FileText } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
-import OptimizedImage from '../../components/OptimizedImage';
+
 
 interface PressRelease {
   id: number;
@@ -239,12 +239,12 @@ Phone: +234 09086138683`,
               onClick={() => handleReleaseClick(release)}
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group overflow-hidden"
             >
-              <div className="relative h-48 sm:h-56 overflow-hidden">
+              {/* <div className="relative h-48 sm:h-56 overflow-hidden">
                 <OptimizedImage
                   src={release.image}
                   alt={release.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+                /> */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="flex items-center gap-2 text-white text-sm mb-2">
