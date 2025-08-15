@@ -4,8 +4,7 @@ import {
   Star, MapPin, Linkedin, Twitter, Instagram
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-import OptimizedImage from '../components/OptimizedImage';
-import { jciImages } from '../utils/images';
+
 
 // TypeScript interfaces
 interface Executive {

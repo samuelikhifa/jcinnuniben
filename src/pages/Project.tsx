@@ -13,7 +13,7 @@ import {
   Share2
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-import OptimizedImage from '../components/OptimizedImage';
+
 
 // TypeScript interfaces
 interface KeyProject {
