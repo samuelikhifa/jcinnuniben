@@ -232,40 +232,45 @@ Phone: +234 09086138683`,
         </div>
 
         {/* Press Releases Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 mb-12">
-          {sortedReleases.map((release) => (
-            <div
-              key={release.id}
-              onClick={() => handleReleaseClick(release)}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group overflow-hidden"
-            >
-              {/* <div className="relative h-48 sm:h-56 overflow-hidden">
-                <OptimizedImage
-                  src={release.image}
-                  alt={release.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                /> */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="flex items-center gap-2 text-white text-sm mb-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{new Date(release.date).toLocaleDateString()}</span>
-                    <Clock className="w-4 h-4 ml-2" />
-                    <span>{release.readTime}</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="p-4 sm:p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="px-2 py-1 bg-jcin-yellow/20 text-jcin-dark-blue text-xs font-medium rounded-full">
-                    {release.category.charAt(0).toUpperCase() + release.category.slice(1)}
-                  </span>
-                  <div className="flex items-center gap-1 text-gray-500 text-sm">
-                    <Eye className="w-4 h-4" />
-                    <span>{release.views}</span>
-                  </div>
-                </div>
+       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 mb-12">
+  {sortedReleases.map((release) => (
+    <div
+      key={release.id}
+      onClick={() => handleReleaseClick(release)}
+      className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group overflow-hidden"
+    >
+      {/* Image Section */}
+      <div className="relative h-48 sm:h-56 overflow-hidden">
+        {/* Uncomment this if you want to display the release image */}
+        {/* <OptimizedImage
+          src={release.image}
+          alt={release.title}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+        /> */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div className="absolute bottom-4 left-4 right-4">
+          <div className="flex items-center gap-2 text-white text-sm mb-2">
+            <Calendar className="w-4 h-4" />
+            <span>{new Date(release.date).toLocaleDateString()}</span>
+            <Clock className="w-4 h-4 ml-2" />
+            <span>{release.readTime}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="p-4 sm:p-6">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="px-2 py-1 bg-jcin-yellow/20 text-jcin-dark-blue text-xs font-medium rounded-full">
+            {release.category.charAt(0).toUpperCase() + release.category.slice(1)}
+          </span>
+          <div className="flex items-center gap-1 text-gray-500 text-sm">
+            <Eye className="w-4 h-4" />
+            <span>{release.views}</span>
+          </div>
+        </div>
+      
+
                 
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 group-hover:text-jcin-light-blue transition-colors line-clamp-2">
                   {release.title}
