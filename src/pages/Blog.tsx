@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Search, Calendar, Clock, Eye, Heart, MessageCircle, Share2, 
-  BookOpen, Users, Lightbulb, Target, Award, 
-  ChevronLeft, ChevronRight, 
+  BookOpen, Users, Lightbulb, Target, Award
 } from 'lucide-react';
 
 // TypeScript interfaces
@@ -252,13 +251,7 @@ const Blog: React.FC = () => {
     return () => clearInterval(timer);
   }, [featuredSlides.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % featuredSlides.length);
-  };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + featuredSlides.length) % featuredSlides.length);
-  };
 
   // Helper functions
   const formatDate = (dateString: string): string => {
@@ -355,30 +348,20 @@ const Blog: React.FC = () => {
           ))}
         </div>
         
-        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="mb-6 sm:mb-8 transform transition-all duration-700 ease-out">
+        <div className="relative z-10 text-white max-w-6xl mx-auto px-4 sm:px-6">
+          {/* Mobile-first alignment - left aligned on mobile, center on desktop */}
+          <div className="text-left sm:text-center mb-6 sm:mb-8 transform transition-all duration-700 ease-out">
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black tracking-tight mb-4 sm:mb-6 bg-gradient-to-r from-white via-blue-100 to-jcin-yellow bg-clip-text text-transparent leading-tight">
               {featuredSlides[currentSlide].title}
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl font-light opacity-90 mb-8 sm:mb-12 px-4">
+            <p className="text-lg sm:text-xl md:text-2xl font-light opacity-90 mb-6 sm:mb-8 px-0 sm:px-4">
               {featuredSlides[currentSlide].subtitle}
             </p>
+            <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-jcin-yellow to-jcin-yellow mb-6 sm:mb-8 sm:mx-auto"></div>
           </div>
         </div>
         
-        {/* Navigation Arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-black/30 hover:bg-black/50 transition-colors z-20"
-        >
-          <ChevronLeft className="w-6 h-6 text-white" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-black/30 hover:bg-black/50 transition-colors z-20"
-        >
-          <ChevronRight className="w-6 h-6 text-white" />
-        </button>
+
         
         {/* Navigation */}
         <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-1/2 sm:transform sm:-translate-x-1/2 flex gap-2 sm:gap-3">
@@ -386,8 +369,8 @@ const Blog: React.FC = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/50'
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                currentSlide === index ? 'bg-jcin-yellow w-6 sm:w-8' : 'bg-white/50 hover:bg-white/70'
               }`}
             />
           ))}

@@ -33,23 +33,121 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-6 text-white">Quick Links</h3>
             <ul className="space-y-3">
-              {[
-                { label: 'Home', href: '/' },
-                { label: 'About JCI', href: '/about' },
-                { label: 'Our Team', href: '/team' },
-                { label: 'Registration', href: '/register' },
-                { label: 'Contact', href: '/contact' }
-              ].map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.href} 
-                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
-                  >
-                    <ChevronRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+              {/* Home */}
+              <li>
+                <a 
+                  href="/" 
+                  className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
+                >
+                  <ChevronRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Home
+                </a>
+              </li>
+              
+              {/* About Section */}
+              <li>
+                <div className="text-gray-300 font-medium mb-2">About</div>
+                <ul className="ml-4 space-y-2">
+                  <li>
+                    <a 
+                      href="/about/Jcinunibenverview" 
+                      className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group"
+                    >
+                      <ChevronRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      JCIN UNIBEN Overview
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/about/Jcivision" 
+                      className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group"
+                    >
+                      <ChevronRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      Vision, Mission & Values
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+              {/* Media Section */}
+              <li>
+                <div className="text-gray-300 font-medium mb-2">Media</div>
+                <ul className="ml-4 space-y-2">
+                  <li>
+                    <a 
+                      href="/media/Gallery" 
+                      className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group"
+                    >
+                      <ChevronRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      Photo Gallery
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/media/Press" 
+                      className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group"
+                    >
+                      <ChevronRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      Press Releases
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+              {/* Projects */}
+              <li>
+                <a 
+                  href="/Project" 
+                  className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
+                >
+                  <ChevronRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Projects
+                </a>
+              </li>
+              
+              {/* Administration */}
+              <li>
+                <a 
+                  href="/Administration" 
+                  className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
+                >
+                  <ChevronRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Administration
+                </a>
+              </li>
+              
+              {/* Blog */}
+              <li>
+                <a 
+                  href="/blog" 
+                  className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
+                >
+                  <ChevronRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Blog
+                </a>
+              </li>
+              
+              {/* Contact */}
+              <li>
+                <a 
+                  href="/contact" 
+                  className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
+                >
+                  <ChevronRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Contact
+                </a>
+              </li>
+              
+              {/* Login */}
+              <li>
+                <a 
+                  href="/login" 
+                  className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
+                >
+                  <ChevronRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Login
+                </a>
+              </li>
             </ul>
           </div>
 
