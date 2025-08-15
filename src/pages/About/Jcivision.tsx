@@ -16,7 +16,7 @@ import {
   Handshake
 } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
-// import in3Img from "../../assets/images/Gallery/in3.jpg";
+import in3Img from "../../assets/images/Gallery/in3.jpg";
 import visionImg from "../../assets/images/112/vision.webp";
 import ps4 from "../../assets/Images/Gallery/ps4.webp";
 import ps8 from "../../assets/Images/Gallery/ps8.webp";
