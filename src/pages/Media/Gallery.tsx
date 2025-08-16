@@ -45,23 +45,6 @@ const Gallery = () => {
     { id: 3, title: "JCI Nigeria Annual Conference", image: eko},
   ];
 
-// export const jciImages = {
-//   gallery: {
-//     leadership: { src: leadershipImg },
-//     event: [
-//       { src: event1 },
-//       { src: event2 },
-//       { src: event3 },
-//       // ...
-//     ],
-//      Community: [
-//       { src: cp1 },
-//       { src: cp2 },
-//       { src: cp3 },
-//       // ...
-//     ],
-//   },
-// };
   const categories: Category[] = [
     { id: 'all', name: 'All Media', count: 24 },
     { id: 'events', name: 'Events', count: 12 },
@@ -73,8 +56,8 @@ const Gallery = () => {
   const mediaItems: MediaItem[] = [
     {
       id: 1,
-      url: jciImages.gallery.leadership.src,
-      thumbnail: jciImages.gallery.leadership.src,
+      url: pg1,
+      thumbnail: pg2, 
       title: "Leadership Workshop 2024",
       category: "leadership",
       date: "2024-03-15",
@@ -95,8 +78,8 @@ const Gallery = () => {
     },
     {
       id: 3,
-      url: jciImages.gallery.events.src,
-      thumbnail: jciImages.gallery.events.src,
+      url: eko,
+      thumbnail: eko,
       title: "JCI Nigeria  Collegiate Conference",
       category: "events",
       date: "2025-07-01",
@@ -106,8 +89,8 @@ const Gallery = () => {
     },
     {
       id: 4,
-      url: jciImages.gallery.training.src,
-      thumbnail: jciImages.gallery.training.src,
+      url: pg2,
+      thumbnail: pg2,
       title: "Entrepreneurship Training",
       category: "training",
       date: "2024-04-10",

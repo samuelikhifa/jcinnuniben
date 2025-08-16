@@ -4,7 +4,9 @@ import {
   Star, MapPin, Linkedin, Twitter, Instagram
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-
+import img33 from "../assets/Images/Gallery/33.jpg";
+// import img33 from "../assets/Images/Gallery/33.jpg";
+// import img33 from "../assets/Images/Gallery/33.jpg";
 
 // TypeScript interfaces
 interface Executive {
@@ -45,7 +47,7 @@ const Administration = () => {
       id: 1,
       name: "Praise Ewere",
       position: "President",
-      image: jciImages.administration.president.src,
+      image: img33,
       bio: "Leading JCI Nigeria UNIBEN with vision and dedication to youth empowerment and community development.",
       achievements: [
         "Increased membership by 40%",
@@ -58,37 +60,37 @@ const Administration = () => {
         instagram: "#"
       }
     },
-    {
-      id: 2,
-      name: "Vice President Internal",
-      position: "Vice President Internal",
-      image: jciImages.administration.vp.src,
-      bio: "Overseeing internal operations and member development programs.",
-      achievements: [
-        "Streamlined internal processes",
-        "Improved member retention rate",
-        "Organized leadership training sessions"
-      ],
-      social: {
-        linkedin: "#"
-      }
-    },
-    {
-      id: 3,
-      name: "Vice President External",
-      position: "Vice President External",
-      image: jciImages.administration.secretary.src,
-      bio: "Managing external relations and community partnerships.",
-      achievements: [
-        "Secured major sponsorships",
-        "Built strategic partnerships",
-        "Enhanced public relations"
-      ],
-      social: {
-        linkedin: "#",
-        twitter: "#"
-      }
-    }
+    // {
+    //   id: 2,
+    //   name: "Vice President Project",
+    //   position: "Vice President Project",
+    //   image: img33,
+    //   bio: "Overseeing internal operations and member development programs.",
+    //   achievements: [
+    //     "Streamlined internal processes",
+    //     "Improved member retention rate",
+    //     "Organized leadership training sessions"
+    //   ],
+    //   social: {
+    //     linkedin: "#"
+    //   }
+    // },
+    // {
+    //   id: 3,
+    //   name: "Vice President Administration",
+    //   position: "Vice President Administration",
+    //   image: img33,
+    //   bio: "Managing external relations and community partnerships.",
+    //   achievements: [
+    //     "Secured major sponsorships",
+    //     "Built strategic partnerships",
+    //     "Enhanced public relations"
+    //   ],
+    //   social: {
+    //     linkedin: "#",
+    //     twitter: "#"
+    //   }
+    // }
   ];
 
   const majorAchievements: Achievement[] = [

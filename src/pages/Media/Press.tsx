@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Calendar, Clock, User, Search, Download, Share2, Eye, Globe, Award, Users, Target, ChevronDown, FileText } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
-
+import mc1 from "../../assets/Images/Gallery/mc1.jpg";
+import lw1 from "../../assets/Images/Gallery/lw1.jpg";
+import jw1 from "../../assets/Images/Gallery/jw1.webp";
 
 interface PressRelease {
   id: number;
@@ -27,9 +29,9 @@ const Press = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const featuredSlides = [
-    { id: 1, title: "JCIN UNIBEN MEETS WITH NEW DEAN OF STUDENTS", image: "/images/press/dean-meeting.jpg" },
-    { id: 2, title: "JCIN UNIBEN HOSTS ANNUAL AWARDS CEREMONY", image: "/images/press/awards-ceremony.jpg" },
-    { id: 3, title: "JCIN UNIBEN PARTICIPATES IN GREEN INITIATIVES", image: "/images/press/green-initiatives.jpg" },
+    { id: 1, title: "JCIN UNIBEN MEETS WITH NEW DEAN OF STUDENTS", image: jw1 },
+    { id: 2, title: "JCIN UNIBEN HOSTS ANNUAL AWARDS CEREMONY", image: mc1 },
+    { id: 3, title: "JCIN UNIBEN PARTICIPATES IN GREEN INITIATIVES", image: lw1 },
   ];
 
   const categories = [
@@ -142,9 +144,9 @@ Phone: +234 09086138683`,
               <img 
                 src={slide.image} 
                 alt={slide.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-jcin-light-blue to-jcin-dark-blue opacity-90"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-br from-jcin-light-blue to-jcin-dark-blue opacity-90"></div> */}
               <div className="absolute inset-0 bg-black/20"></div>
             </div>
           ))}

@@ -14,6 +14,9 @@ import {
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
+import b1 from "../assets/Images/Gallery/b1.webp";
+import lw from "../assets/Images/Gallery/lw.jpg";
+import lw2 from "../assets/Images/Gallery/lw2.jpg";
 
 // TypeScript interfaces
 interface KeyProject {
@@ -122,9 +125,9 @@ const Project: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const featuredSlides = [
-    { id: 1, title: "TOYP Excellence Framework", image: "/images/projects/toyp-framework.jpg" },
-    { id: 2, title: "Youth Entrepreneurship Hub", image: "/images/projects/entrepreneurship-hub.jpg" },
-    { id: 3, title: "Community Impact Initiative", image: "/images/projects/community-impact.jpg" },
+    { id: 1, title: "TOYP Excellence Framework", image: b1 },
+    { id: 2, title: "Student Entrepreneurship ", image: lw },
+    { id: 3, title: "Community Impact Initiative", image: lw2 },
   ];
 
   const keyProjects: KeyProject[] = [
@@ -228,9 +231,9 @@ const Project: React.FC = () => {
                 <img 
                   src={slide.image} 
                   alt={slide.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-jcin-light-blue to-jcin-dark-blue opacity-90"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-jcin-light-blue to-jcin-dark-blue opacity-90"></div> */}
                 <div className="absolute inset-0 bg-black/20"></div>
               </div>
             ))}
