@@ -150,11 +150,11 @@ const Jcinunibenverview = () => {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-jcin-light-blue to-jcin-yellow rounded-2xl sm:rounded-3xl transform rotate-2 sm:rotate-3 group-hover:rotate-4 sm:group-hover:rotate-6 transition-transform duration-300"></div>
               
-<img
+{/* <img
   src={otsImg}
   alt="aboutjcinuniben"
                 className="relative rounded-2xl sm:rounded-3xl w-full h-auto object-cover shadow-2xl"
-              />
+              /> */}
             </div>
             
             <div className="space-y-6 sm:space-y-8">
