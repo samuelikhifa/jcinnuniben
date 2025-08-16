@@ -28,7 +28,7 @@ const App: React.FC = () => {
               element={<Jcinunibenverview />}
             />
             <Route path="/about/Jcivision" element={<Jcivision />} />
-            <Route path="/administration" element={<Administration />} />
+            <Route path="/Administration" element={<Administration />} />
             {/* <Route path="/administration/Currentexecutives" element={<Currentexecutives />} />
                <Route path="/administration/ Pastadmins" element={< Pastadmins />} />
                 <Route path="/administration/ Majorachievements" element={< Majorachievements />} /> */}
@@ -38,6 +38,21 @@ const App: React.FC = () => {
             <Route path="/media/Press" element={<Press />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
+            {/* Catch-all route for 404 */}
+            <Route path="*" element={
+              <div className="min-h-screen flex items-center justify-center bg-slate-50">
+                <div className="text-center">
+                  <h1 className="text-6xl font-bold text-slate-900 mb-4">404</h1>
+                  <p className="text-xl text-slate-600 mb-8">Page not found</p>
+                  <a 
+                    href="/" 
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-jcin-light-blue to-jcin-dark-blue text-white font-semibold rounded-lg hover:from-jcin-light-blue hover:to-jcin-dark-blue transition-all duration-200"
+                  >
+                    Go Home
+                  </a>
+                </div>
+              </div>
+            } />
           </Routes>
         </main>
         <Footer />
