@@ -214,12 +214,12 @@ const Administration = () => {
                   {currentExecutives.map((executive: Executive) => (
                     <div key={executive.id} className="bg-jcin-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
                       <div className="relative aspect-square overflow-hidden">
-                        <OptimizedImage
+                        {/* <OptimizedImage
                           src={executive.image}
                           alt={executive.name}
                           className="w-full h-full object-cover"
                           fallback="https://via.placeholder.com/400x400/003da5/ffffff?text=Executive"
-                        />
+                        /> */}
                         <div className="absolute inset-0 bg-gradient-to-t from-jcin-black/60 via-transparent to-transparent"></div>
                         <div className="absolute bottom-4 left-4 right-4">
                           <h3 className="text-xl font-bold text-jcin-white mb-1">{executive.name}</h3>

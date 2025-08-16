@@ -42,12 +42,11 @@ const KeyProjectCard: React.FC<KeyProjectCardProps> = ({ project }) => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
         {/* Image Section */}
         <div className="relative h-64 lg:h-full overflow-hidden">
-          <OptimizedImage
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            fallback="https://via.placeholder.com/600x400/003da5/ffffff?text=Key+Project"
-          />
+          <img
+  src={project.image || "https://via.placeholder.com/600x400/003da5/ffffff?text=Key+Project"}
+  alt={project.title}
+  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+/>
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           <div className="absolute top-4 left-4">
             <span className={`px-3 py-1 rounded-full text-xs font-bold text-white ${project.color}`}>

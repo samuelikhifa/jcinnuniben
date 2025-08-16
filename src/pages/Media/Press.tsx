@@ -240,13 +240,14 @@ Phone: +234 09086138683`,
       className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group overflow-hidden"
     >
       {/* Image Section */}
-      <div className="relative h-48 sm:h-56 overflow-hidden">
-        {/* Uncomment this if you want to display the release image */}
-        {/* <OptimizedImage
-          src={release.image}
-          alt={release.title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-        /> */}
+     <div className="relative h-48 sm:h-56 overflow-hidden">
+  {/* Display the release image */}
+  {/* <img
+    src={release.image}
+    alt={release.title}
+    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+  /> */}
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         <div className="absolute bottom-4 left-4 right-4">
           <div className="flex items-center gap-2 text-white text-sm mb-2">

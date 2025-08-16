@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import ps from "../../assets/Images/Gallery/ps.jpg";
 import bm1 from "../../assets/Images/111/bm1.webp";
-// import otsImg from "../../assets/images/Gallery/ots.jpg";
+import otsImg from "../../assets/images/Gallery/ots.jpg";
 import fb7 from "../../assets/Images/Gallery/fb7.jpg";
 import fb0Img from "../../assets/Images/Gallery/fb0.jpg";
 import jciworldImg from "../../assets/Images/Gallery/jciworld.webp";
