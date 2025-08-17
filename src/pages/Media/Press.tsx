@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { Calendar, Clock, User, Search, Download, Share2, Eye, Globe, Award, Users, Target, ChevronDown, FileText } from 'lucide-react';
-import SEOHead from '../../components/SEOHead';
-import mc1 from "../../assets/Images/Gallery/mc1.jpg";
-import lw1 from "../../assets/Images/Gallery/lw1.jpg";
-import jw1 from "../../assets/Images/Gallery/jw1.webp";
+import mc1 from "../../../assets/Images/Gallery/mc1.JPG";
+import lw1 from "../../../assets/Images/Gallery/lw.jpg";
+import jw1 from "../../../assets/Images/Gallery/jciworld.webp";
 
 interface PressRelease {
   id: number;
@@ -94,7 +93,7 @@ Phone: +234 09086138683`,
       readTime: "5 min read",
       tags: ["Leadership", "Partnership", "EBL 7.0", "University Relations"],
       views: 1250,
-      image: "/images/press/dean-meeting.jpg",
+      image: "../../assets/Images/Press/ebl.jpg",
       featured: true,
       downloadable: true
     },
