@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Calendar, Clock, User, Search, Download, Share2, Eye, Globe, Award, Users, Target, ChevronDown, FileText } from 'lucide-react';
-import mc1 from "../../../assets/Images/Gallery/mc1.JPG";
-import lw1 from "../../../assets/Images/Gallery/lw.jpg";
-import jw1 from "../../../assets/Images/Gallery/jciworld.webp";
+import mc1 from "../../assets/Images/Gallery/cp1.jpg";
+import lw1 from "../../assets/Images/Gallery/lw.jpg";
+import jw1 from "../../assets/Images/Gallery/jciworld.webp";
 
 interface PressRelease {
   id: number;
