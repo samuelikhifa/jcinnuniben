@@ -4,10 +4,41 @@ import {
   Star, MapPin, Linkedin, Twitter, Instagram
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-import img33 from "../assets/Images/Gallery/33.jpg";
-// import img33 from "../assets/Images/Gallery/33.jpg";
-// import img33 from "../assets/Images/Gallery/33.jpg";
-
+import r77 from "../assets/Images/Gallery/r77.webp";
+import ots from "../assets/Images/Gallery/ots.jpg";
+import r66 from "../assets/Images/Gallery/r66.webp";
+import e33 from "../assets/Images/Gallery/e33.jpg"; 
+import  peace from "../assets/Images/board1/peace.webp";
+import  godwin from "../assets/Images/board1/godwin.webp";
+// import  adaku from "../assets/Images/board1/ adaku .webp";
+import  izevbizua  from "../assets/Images/board1/izevbizua .webp";
+import  divine from "../assets/Images/board1/divine.webp";
+import  aaron from "../assets/Images/board1/aaron.webp";
+import  efosa from "../assets/Images/board1/efosa.webp";
+// import  bless from "../assets/Images/board1/bless.webp";
+import  fanny from "../assets/Images/board1/fanny.webp";
+import  adatang from "../assets/Images/board1/adatang.webp";
+import  favy from "../assets/Images/board1/favy.webp";
+import  eze from "../assets/Images/board1/eze.webp";
+import  eseosa from "../assets/Images/board1/eseosa.webp";
+import  jude from "../assets/Images/board1/jude.webp";
+import  erons from "../assets/Images/board1/erons.webp";
+import  olivia from "../assets/Images/board1/olivia.webp";
+import  efe from "../assets/Images/board1/efe.webp";
+import  efemena from "../assets/Images/board1/efemena.webp";
+import  emordi from "../assets/Images/board1/emordi.webp";
+import  olabisi from "../assets/Images/board1/olabisi.webp";
+import  df from "../assets/Images/board1/df.webp";
+import  kent from "../assets/Images/board1/kent.webp";
+import  etinosa from "../assets/Images/board1/etinosa.webp";
+import  fasuyi from "../assets/Images/board1/fasuyi.webp";
+import  percu from "../assets/Images/board1/percu.webp";
+import  obelawo from "../assets/Images/board1/obelawo.webp";
+import  priscila from "../assets/Images/board1/priscila.webp";
+import  ojo from "../assets/Images/board1/ojo.webp";
+import  peter from "../assets/Images/board1/peter.webp";
+import  noel from "../assets/Images/board1/noel.webp";
+import  chioma from "../assets/Images/board1/chioma.webp";
 // TypeScript interfaces
 interface Executive {
   id: number;
@@ -37,9 +68,9 @@ const Administration = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const featuredSlides = [
-    { id: 1, title: "Meet Our Leadership Team", image: "/images/administration/leadership-team.jpg" },
-    { id: 2, title: "Driving Positive Change", image: "/images/administration/positive-change.jpg" },
-    { id: 3, title: "Youth Empowerment Through Leadership", image: "/images/administration/youth-empowerment.jpg" },
+    { id: 1, title: "Meet Our Leadership Team", image: r77 },
+    { id: 2, title: "Driving Positive Change", image: ots },
+    { id: 3, title: "Youth Empowerment Through Leadership", image: r66 },
   ];
 
   const currentExecutives: Executive[] = [
@@ -47,45 +78,359 @@ const Administration = () => {
       id: 1,
       name: "Praise Ewere",
       position: "President",
-      image: img33,
-      bio: "Leading JCI Nigeria UNIBEN with vision and dedication to youth empowerment and community development.",
-      achievements: [
-        "Increased membership by 40%",
-        "Launched 5 major community projects",
-        "Established partnerships with 10+ organizations"
-      ],
+       image: e33,
       social: {
         linkedin: "#",
         twitter: "#",
         instagram: "#"
       }
     },
-    // {
-    //   id: 2,
-    //   name: "Vice President Project",
-    //   position: "Vice President Project",
-    //   image: img33,
-    //   bio: "Overseeing internal operations and member development programs.",
-    //   achievements: [
-    //     "Streamlined internal processes",
-    //     "Improved member retention rate",
-    //     "Organized leadership training sessions"
-    //   ],
-    //   social: {
-    //     linkedin: "#"
-    //   }
-    // },
+    {
+      id: 2,
+      name: " Oghenetega Divine Ukeghe",
+      position: "Immediate Past President-",
+      image: divine,
+      
+      social: {
+        linkedin: "#",
+         instagram: "#"
+      }
+    },
     // {
     //   id: 3,
-    //   name: "Vice President Administration",
-    //   position: "Vice President Administration",
+    //   name: " Osatohanmwen Goodness ",
+    //   position: "Executive Vice President",
     //   image: img33,
-    //   bio: "Managing external relations and community partnerships.",
-    //   achievements: [
-    //     "Secured major sponsorships",
-    //     "Built strategic partnerships",
-    //     "Enhanced public relations"
-    //   ],
+    //   social: {
+    //     linkedin: "#",
+    //     twitter: "#"
+    //   }
+    // },
+     {
+      id: 4,
+      name: "  Kent Adeyinka",
+      position: "Vice President Project",
+      image: kent,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 5,
+      name: "Ikem Peculiar Chidinma  ",
+      position: "Vice President Administration",
+      image: percu,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 6,
+      name: "Divine-Favour Usifoh Mehnribose",
+      position: "Local Organisation Treasurer",
+      image: df,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 7,
+      name: " Taiye Abiodun Peace",
+      position: " Local Organisation Secretary",
+      image: peace,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 8,
+      name: "Victor Olabisi",
+      position: " General Legal Counsel",
+      image: olabisi,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 9,
+      name: "Ishioma Olivia",
+      position: "Director of Membership Growth and Retention",
+      image: olivia,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 10,
+      name: "  Aaron Efedosa",
+      position: "Deputy Director of Membership Growth and Retention",
+      image: aaron,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 11,
+      name: " Izebvizua Deborah",
+      position: "Director Of Skill Development ",
+      image: izevbizua,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 12,
+      name: "Priscilla Obadoni ",
+      position: "Deputy director Of Skill Development ",
+      image: priscila,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 13,
+      name: " Dumebi Emordi ",
+      position: "Director of Meetings",
+      image: emordi,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 14,
+      name: "Emmanuel Okiemute",
+      position: "Deputy Director of Meetings",
+      image: efemena,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 15,
+      name: "   Mellina Etinosa ",
+      position: " Deputy Director 2 of Meetings ",
+      image: efe,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 16,
+      name: "  Excellent Efosa  ",
+      position: "Director of Special Duties ",
+      image: efosa,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 17,
+      name: " Favour Osioria ",
+      position: " Deputy Director of Special Duties",
+      image: favy,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 18,
+      name: " Jeremiah Kelechi ",
+      position: "Director of Special Content ",
+      image: ojo,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 19,
+      name: " Godwin Ahonsi  ",
+      position: "Deputy Director of Special Content",
+      image: godwin,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 20,
+      name: " Igbinoba Eseosa",
+      position: "Deputy Director of Communications",
+      image: eseosa,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 21,
+      name: " Noel Ebeigbe ",
+      position: "Deputy Director 2 of Communications",
+      image: noel,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+    //     {
+    //   id: 22,
+    //   name: " Joybaby Fikayom ",
+    //   position: " Director of Social",
+    //   image: img33,
+    //   social: {
+    //     linkedin: "#",
+    //     twitter: "#"
+    //   }
+    // },
+        {
+      id: 23,
+      name: " Peter Japheth",
+      position: "Director of Employability, Business and Leaderships (EBL)",
+      image: peter,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+    //     {
+    //   id: 24,
+    //   name: "Blessing Ayemi",
+    //   position: "Deputy Director 1 of EBL",
+    //   image: bless,
+    //   social: {
+    //     linkedin: "#",
+    //     twitter: "#"
+    //   }
+    // },
+        {
+      id: 25,
+      name: " Melissa Etinosa ",
+      position: "Deputy Director 2 of EBL",
+      image: etinosa,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 26,
+      name: " Deborah Obelawo ",
+      position: "Director of Ten Outstanding Young Persons (TOYP)",
+      image: obelawo,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 27,
+      name: "Chioma Obiekwe ",
+      position: "Deputy Director of TOYP",
+      image: chioma,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 28,
+      name: " Eromosele Emmanuel ",
+      position: "Director of Community Project",
+      image: erons,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 29,
+      name: "  Deborah Fasuyi",
+      position: "Deputy Director 2 of Community Project",
+      image: fasuyi,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 30,
+      name: " Eze Joan Onyinyechi  ",
+      position: "Director of Awards and Documentations ",
+      image: eze,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 31,
+      name: "Fanny Itepu ",
+      position: "Committee Head of Travels and Tours",
+      image: fanny,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+    //     {
+    //   id: 32,
+    //   name: " Chimaobi Nwarisa ",
+    //   position: "Disciplinary Committee",
+    //   image: mobi,
+    //   social: {
+    //     linkedin: "#",
+    //     twitter: "#"
+    //   }
+    // },
+      //   {
+      // id: 33,
+      // name: " Ofure Ochiemen",
+      // position: "Disciplinary Committee",
+      // image: ofure,
+      // social: {
+      //   linkedin: "#",
+      //   twitter: "#"
+      // }
+    // },
+        {
+      id: 34,
+      name: "Jude Onose ",
+      position: "Fund Raising Committee ( Bus Project) Memeber",
+      image: jude,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    },
+        {
+      id: 35,
+      name: " Marvellous Adatang ",
+      position: "Fund Raising Committee ( Bus Project) Memeber",
+      image: adatang,
+      social: {
+        linkedin: "#",
+        twitter: "#"
+      }
+    }
+    //     {
+    //   id: 36,
+    //   name: " Favour Charles,  ",
+    //   position: "Fund Raising Committee ( Bus Project) Memeber",
+    //   image: charles,
     //   social: {
     //     linkedin: "#",
     //     twitter: "#"
@@ -143,9 +488,9 @@ const Administration = () => {
                 <img 
                   src={slide.image} 
                   alt={slide.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-jcin-light-blue to-jcin-dark-blue opacity-90"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-jcin-light-blue to-jcin-dark-blue opacity-90"></div> */}
                 <div className="absolute inset-0 bg-black/20"></div>
               </div>
             ))}
@@ -216,12 +561,13 @@ const Administration = () => {
                   {currentExecutives.map((executive: Executive) => (
                     <div key={executive.id} className="bg-jcin-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
                       <div className="relative aspect-square overflow-hidden">
-                        {/* <OptimizedImage
+                        <img
                           src={executive.image}
                           alt={executive.name}
-                          className="w-full h-full object-cover"
-                          fallback="https://via.placeholder.com/400x400/003da5/ffffff?text=Executive"
-                        /> */}
+                          className="w-full h-full object-cover object-top"
+                          
+                        /> 
+                         
                         <div className="absolute inset-0 bg-gradient-to-t from-jcin-black/60 via-transparent to-transparent"></div>
                         <div className="absolute bottom-4 left-4 right-4">
                           <h3 className="text-xl font-bold text-jcin-white mb-1">{executive.name}</h3>
@@ -232,20 +578,7 @@ const Administration = () => {
                       <div className="p-6">
                         <p className="text-slate-700 mb-4 leading-relaxed">{executive.bio}</p>
                         
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-slate-900 mb-2 flex items-center">
-                            <Star className="w-4 h-4 mr-2 text-jcin-yellow" />
-                            Key Achievements
-                          </h4>
-                          <ul className="space-y-1">
-                            {executive.achievements.map((achievement: string, index: number) => (
-                              <li key={index} className="text-sm text-slate-600 flex items-start">
-                                <span className="w-1.5 h-1.5 bg-jcin-light-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                                {achievement}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                       
                         
                         <div className="flex gap-3">
                           {executive.social.linkedin && (

@@ -7,9 +7,12 @@ import bm from "../assets/Images/111/bm.webp";
 import praiseImg from "../assets/Images/board1/praise.jpg";
 import ige from "../assets/Images/Gallery/ige.webp";
 import odey from "../assets/Images/Gallery/odey.webp";
+import  noel from "../assets/Images/board1/noel.webp";
+import RegistrationForm from '../components/RegistrationForm';
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
 
   const slides = [
     {
@@ -41,16 +44,16 @@ const Home = () => {
     },
     {
       name: "TESTIMONY ODEY",
-      role: odey,
-      image: "/api/placeholder/120/120",
+      role: "JCIN UNIBEN Member",
+      image: odey,
       text: "Despite thinking I wouldn't fit in, joining JCIN UNIBEN turned out to be one of my best decisions as it gave me opportunities to grow, perform, connect, and thrive beyond my creative expectations.",
       rating: 5
     },
     {
-      name: "Emmanuel Peters",
-      role: "Innovation Hub Founder",
-      image: "/api/placeholder/120/120",
-      text: "From student to global entrepreneur - JCIN UNIBEN provided the platform and connections I needed.",
+      name: "EBEIGBE NOEL",
+      role: "Senator, 38th Assembly, Uniben",
+      image: noel,
+      text: "JCI sparked my leadership journey, built resilience, inspired meaningful connections, and ignited a lifelong commitment to impact—proving it's more than a group, it's a movement.",
       rating: 5
     }
   ];
@@ -106,7 +109,10 @@ const Home = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:justify-center items-start sm:items-center px-0 sm:px-4">
-            <button className="group relative w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-jcin-yellow to-jcin-yellow text-jcin-black font-bold text-base sm:text-lg rounded-full shadow-2xl hover:shadow-jcin-yellow/30 transition-all duration-300 hover:scale-105 transform">
+            <button 
+              onClick={() => setShowRegistrationForm(true)}
+              className="group relative w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-jcin-yellow to-jcin-yellow text-jcin-black font-bold text-base sm:text-lg rounded-full shadow-2xl hover:shadow-jcin-yellow/30 transition-all duration-300 hover:scale-105 transform"
+            >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 {slides[currentSlide].cta}
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -254,7 +260,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 bg-gradient-to-r from-jcin-yellow to-jcin-yellow bg-clip-text text-transparent leading-tight">
-              Global Success Stories
+              My JCI Stories & Testimonials
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto px-4">
               Hear from leaders who transformed their lives through JCIN UNIBEN
@@ -349,21 +355,24 @@ const Home = () => {
             Ready to <span className="text-white">Legacy</span> Your Future?
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl font-light mb-8 sm:mb-12 max-w-4xl mx-auto opacity-90 px-4 leading-relaxed">
-            Join the  movement of young leaders who are reshaping industries, communities, and the world. Your extraordinary journey starts here.
+            Join the movement of young leaders who are reshaping University of Benin. Your extraordinary journey starts here.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center items-center mb-12 sm:mb-16">
-            <button className="group relative w-full sm:w-auto px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 bg-jcin-black text-white font-bold text-lg sm:text-xl rounded-full shadow-2xl hover:shadow-jcin-black/30 transition-all duration-300 hover:scale-105 transform">
+            <button 
+              onClick={() => setShowRegistrationForm(true)}
+              className="group relative w-full sm:w-auto px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 bg-jcin-black text-white font-bold text-lg sm:text-xl rounded-full shadow-2xl hover:shadow-jcin-black/30 transition-all duration-300 hover:scale-105 transform"
+            >
               <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
                 Join JCI Now
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
               </span>
             </button>
-            <Link to="pages/project">
-            <button className="group w-full sm:w-auto px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 border-2 sm:border-3 border-jcin-black text-jcin-black font-bold text-lg sm:text-xl rounded-full hover:bg-jcin-black hover:text-white transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 sm:gap-3">
-              <Play className="w-5 h-5 sm:w-6 sm:h-6" />
-              Explore Projects
-            </button>
+            <Link to="/project">
+              <button className="group w-full sm:w-auto px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 border-2 sm:border-3 border-jcin-black text-jcin-black font-bold text-lg sm:text-xl rounded-full hover:bg-jcin-black hover:text-white transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 sm:gap-3">
+                <Play className="w-5 h-5 sm:w-6 sm:h-6" />
+                Explore Projects
+              </button>
             </Link>
           </div>
           
@@ -381,6 +390,12 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* Registration Form Modal */}
+      <RegistrationForm 
+        isOpen={showRegistrationForm}
+        onClose={() => setShowRegistrationForm(false)}
+      />
     </div>
   );
 };

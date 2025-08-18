@@ -10,10 +10,12 @@ import otsImg from "../../assets/Images/Gallery/ots.jpg";
 import fb7 from "../../assets/Images/Gallery/fb7.jpg";
 import fb0Img from "../../assets/Images/Gallery/fb0.jpg";
 import jciworldImg from "../../assets/Images/Gallery/jciworld.webp";
+import RegistrationForm from '../../components/RegistrationForm';
 
 const Jcinunibenverview = () => {
   const [showMore, setShowMore] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
 
   // Hero slides for JCIN UNIBEN Overview
   const slides = [
@@ -179,13 +181,13 @@ const Jcinunibenverview = () => {
               
            <div className="pt-4 sm:pt-6">
   {!showMore && (
-    <button 
-      onClick={() => setShowMore(true)}
-      className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-jcin-light-blue to-jcin-dark-blue text-white font-semibold text-sm sm:text-base rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center"
-    >
-      Learn More
-      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-    </button>
+                      <button 
+                    onClick={() => setShowMore(true)}
+                    className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-jcin-light-blue to-jcin-dark-blue text-white font-semibold text-sm sm:text-base rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center cursor-pointer"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </button>
   )}
 </div>
 
@@ -299,7 +301,10 @@ const Jcinunibenverview = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12 md:mb-16">
-            <button className="group relative w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-jcin-black text-white font-bold text-lg sm:text-xl rounded-full shadow-2xl hover:shadow-jcin-black/30 transition-all duration-300 hover:scale-105 transform">
+            <button 
+              onClick={() => setShowRegistrationForm(true)}
+              className="group relative w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-jcin-black text-white font-bold text-lg sm:text-xl rounded-full shadow-2xl hover:shadow-jcin-black/30 transition-all duration-300 hover:scale-105 transform"
+            >
               <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
                 Join JCIN UNIBEN
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
@@ -326,6 +331,12 @@ const Jcinunibenverview = () => {
           </div>
         </div>
       </div>
+
+      {/* Registration Form Modal */}
+      <RegistrationForm 
+        isOpen={showRegistrationForm}
+        onClose={() => setShowRegistrationForm(false)}
+      />
     </div>
   );
 };

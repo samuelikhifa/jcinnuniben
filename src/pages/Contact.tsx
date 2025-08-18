@@ -4,6 +4,7 @@ import {
   Facebook, Twitter, Instagram, Linkedin, Youtube,
   Clock
 } from 'lucide-react';
+import RegistrationForm from '../components/RegistrationForm';
 
 // TypeScript interfaces
 interface FormData {
@@ -30,6 +31,7 @@ const Contact: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [showSuccess, setShowSuccess] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [showRegistrationForm, setShowRegistrationForm] = useState<boolean>(false);
 
   const featuredSlides = [
     {
@@ -132,7 +134,10 @@ const Contact: React.FC = () => {
           
           {/* Mobile-first button alignment - left aligned on mobile */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:justify-center items-start sm:items-center px-0 sm:px-4">
-            <button className="group relative w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-jcin-yellow to-jcin-yellow text-jcin-black font-bold text-base sm:text-lg rounded-full shadow-2xl hover:shadow-jcin-yellow/30 transition-all duration-300 hover:scale-105 transform">
+            <button 
+              onClick={() => setShowRegistrationForm(true)}
+              className="group relative w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-jcin-yellow to-jcin-yellow text-jcin-black font-bold text-base sm:text-lg rounded-full shadow-2xl hover:shadow-jcin-yellow/30 transition-all duration-300 hover:scale-105 transform"
+            >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 Get In Touch
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -448,6 +453,12 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Registration Form Modal */}
+      <RegistrationForm 
+        isOpen={showRegistrationForm}
+        onClose={() => setShowRegistrationForm(false)}
+      />
     </div>
   );
 };

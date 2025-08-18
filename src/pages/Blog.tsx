@@ -19,6 +19,7 @@ import {
   Bookmark,
   Filter,
 } from "lucide-react";
+import RegistrationForm from '../components/RegistrationForm';
 
 const Blog = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -26,6 +27,7 @@ const Blog = () => {
   const [selectedPost, setSelectedPost] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sortBy, setSortBy] = useState("newest");
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
 
   const categories = [
     { id: "all", name: "All Posts", icon: Globe },
@@ -1503,23 +1505,9 @@ The lesson for aspiring entrepreneurs, established businesses, and policymakers 
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">
-              JCI Nigeria Blog
-            </h1>
-            <p className="text-xl text-gray-600">
-              Stories of Leadership, Innovation, and Impact
-            </p>
-          </div>
-        </div>
-      </header>
-
-      {/* Featured Carousel */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="relative h-96 overflow-hidden">
+      {/* Hero Section - Matching other pages structure and size */}
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <div className="absolute inset-0 z-0">
           {featuredSlides.map((slide, index) => (
             <div
               key={index}
@@ -1530,56 +1518,69 @@ The lesson for aspiring entrepreneurs, established businesses, and policymakers 
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center max-w-4xl px-4">
-                  <h2 className="text-5xl font-bold mb-4">{slide.title}</h2>
-                  <p className="text-xl">{slide.subtitle}</p>
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-jcin-light-blue to-jcin-dark-blue opacity-90"></div>
+              <div className="absolute inset-0 bg-black/20"></div>
             </div>
           ))}
         </div>
+        
+        <div className="relative z-10 text-white max-w-6xl mx-auto px-4 sm:px-6">
+          {/* Mobile-first alignment - left aligned on mobile, center on desktop */}
+          <div className="text-left sm:text-center mb-6 sm:mb-8 transform transition-all duration-700 ease-out">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black tracking-tight mb-4 sm:mb-6 bg-gradient-to-r from-white via-blue-100 to-jcin-yellow bg-clip-text text-transparent leading-tight">
+              JCI Nigeria Blog
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl font-light opacity-90 mb-6 sm:mb-8 px-0 sm:px-4">
+              Stories of Leadership, Innovation, and Impact
+            </p>
+            <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-jcin-yellow to-jcin-yellow mb-6 sm:mb-8 sm:mx-auto"></div>
+            <p className="text-sm sm:text-lg max-w-4xl sm:mx-auto leading-relaxed px-0 sm:px-4">
+              Discover inspiring stories, leadership insights, and global perspectives from young changemakers across Africa
+            </p>
+          </div>
+        </div>
 
-        {/* Slide Indicators */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {/* Navigation */}
+        <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-1/2 sm:transform sm:-translate-x-1/2 flex gap-2 sm:gap-3">
           {featuredSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? "bg-white" : "bg-white bg-opacity-50"
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-jcin-yellow w-6 sm:w-8' : 'bg-white/50 hover:bg-white/70'
               }`}
             />
           ))}
         </div>
-      </section>
+      </div>
+
+     
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Filters and Search */}
-        <div className="mb-8">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+        <div className="mb-6 sm:mb-8">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4 sm:mb-6">
             <div className="relative mb-4 lg:mb-0">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4 sm:h-5 sm:w-5" />
               <input
                 type="text"
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 pr-4 py-2 w-full lg:w-80 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="pl-10 pr-4 py-2 sm:py-3 w-full lg:w-80 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
               />
             </div>
 
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4">
               <div className="flex items-center space-x-2">
-                <Filter className="h-5 w-5 text-gray-600" />
+                <Filter className="h-4 w-4 sm:h-5 sm:w-5 text-gray-600" />
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="border border-gray-300 rounded-lg px-2 sm:px-3 py-2 sm:py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                 >
                   <option value="newest">Newest First</option>
                   <option value="oldest">Oldest First</option>
@@ -1591,20 +1592,20 @@ The lesson for aspiring entrepreneurs, established businesses, and policymakers 
           </div>
 
           {/* Categories */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             {categories.map((category) => {
               const IconComponent = category.icon;
               return (
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
+                  className={`flex items-center space-x-2 px-3 sm:px-4 py-2 rounded-lg transition-colors text-xs sm:text-sm ${
                     activeCategory === category.id
                       ? "bg-blue-600 text-white"
                       : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-300"
                   }`}
                 >
-                  <IconComponent className="h-4 w-4" />
+                  <IconComponent className="h-3 w-3 sm:h-4 sm:w-4" />
                   <span>{category.name}</span>
                 </button>
               );
@@ -1613,7 +1614,7 @@ The lesson for aspiring entrepreneurs, established businesses, and policymakers 
         </div>
 
         {/* Blog Posts Grid */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {/* Main Posts Column */}
           <div className="lg:col-span-2">
             {filteredPosts.length === 0 ? (
@@ -1644,10 +1645,10 @@ The lesson for aspiring entrepreneurs, established businesses, and policymakers 
                         <img
                           src={post.image}
                           alt={post.title}
-                          className="w-full h-48 md:h-full object-cover"
+                          className="w-full h-32 sm:h-40 md:h-48 md:h-full object-cover"
                         />
                       </div>
-                      <div className="md:w-2/3 p-6">
+                      <div className="md:w-2/3 p-4 sm:p-6">
                         <div className="flex items-center space-x-2 mb-3">
                           <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-medium">
                             {
@@ -1667,46 +1668,46 @@ The lesson for aspiring entrepreneurs, established businesses, and policymakers 
                           )}
                         </div>
 
-                        <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-blue-600 transition-colors">
+                        <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-blue-600 transition-colors">
                           {post.title}
                         </h2>
 
-                        <p className="text-gray-600 mb-4 line-clamp-3">
+                        <p className="text-gray-600 mb-4 line-clamp-3 text-sm sm:text-base">
                           {post.excerpt}
                         </p>
 
-                        <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                          <div className="flex items-center space-x-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs sm:text-sm text-gray-500 mb-4 space-y-2 sm:space-y-0">
+                          <div className="flex items-center space-x-3 sm:space-x-4">
                             <div className="flex items-center">
-                              <Calendar className="h-4 w-4 mr-1" />
+                              <Calendar className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                               {formatDate(post.date)}
                             </div>
                             <div className="flex items-center">
-                              <Clock className="h-4 w-4 mr-1" />
+                              <Clock className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                               {post.readTime}
                             </div>
                           </div>
-                          <div className="flex items-center space-x-3">
+                          <div className="flex items-center space-x-2 sm:space-x-3">
                             <div className="flex items-center">
-                              <Eye className="h-4 w-4 mr-1" />
+                              <Eye className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                               {post.views.toLocaleString()}
                             </div>
                             <div className="flex items-center">
-                              <Heart className="h-4 w-4 mr-1" />
+                              <Heart className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                               {post.likes}
                             </div>
                           </div>
                         </div>
 
-                        <div className="flex items-center justify-between">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-3 sm:space-y-0">
                           <div className="flex items-center space-x-2">
                             <img
                               src={post.author.image}
                               alt={post.author.name}
-                              className="w-8 h-8 rounded-full object-cover"
+                              className="w-6 h-6 sm:w-8 sm:h-8 rounded-full object-cover"
                             />
                             <div>
-                              <p className="text-sm font-medium text-gray-900">
+                              <p className="text-xs sm:text-sm font-medium text-gray-900">
                                 {post.author.name}
                               </p>
                               <p className="text-xs text-gray-600">
@@ -1715,9 +1716,9 @@ The lesson for aspiring entrepreneurs, established businesses, and policymakers 
                             </div>
                           </div>
 
-                          <button className="flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                          <button className="flex items-center text-blue-600 hover:text-blue-800 transition-colors text-sm sm:text-base">
                             Read More
-                            <ArrowRight className="h-4 w-4 ml-1" />
+                            <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 ml-1" />
                           </button>
                         </div>
                       </div>
@@ -1785,60 +1786,7 @@ The lesson for aspiring entrepreneurs, established businesses, and policymakers 
               </div>
             </div>
 
-            {/* Newsletter Signup */}
-            <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-md p-6 text-white">
-              <h3 className="text-xl font-bold mb-2">Stay Updated</h3>
-              <p className="text-blue-100 mb-4">
-                Get the latest insights and stories delivered to your inbox.
-              </p>
-              <div className="space-y-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-3 py-2 rounded text-gray-900 focus:ring-2 focus:ring-blue-300"
-                />
-                <button className="w-full bg-white text-blue-600 py-2 rounded font-medium hover:bg-gray-50 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-            </div>
 
-            {/* Statistics */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Blog Stats
-              </h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Total Articles</span>
-                  <span className="font-bold text-gray-900">
-                    {blogPosts.length}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Total Views</span>
-                  <span className="font-bold text-gray-900">
-                    {blogPosts
-                      .reduce((sum, post) => sum + post.views, 0)
-                      .toLocaleString()}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Total Likes</span>
-                  <span className="font-bold text-gray-900">
-                    {blogPosts
-                      .reduce((sum, post) => sum + post.likes, 0)
-                      .toLocaleString()}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Categories</span>
-                  <span className="font-bold text-gray-900">
-                    {categories.length - 1}
-                  </span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </main>
@@ -1863,6 +1811,12 @@ The lesson for aspiring entrepreneurs, established businesses, and policymakers 
           </div>
         </div>
       </footer>
+
+      {/* Registration Form Modal */}
+      <RegistrationForm 
+        isOpen={showRegistrationForm}
+        onClose={() => setShowRegistrationForm(false)}
+      />
     </div>
   );
 };

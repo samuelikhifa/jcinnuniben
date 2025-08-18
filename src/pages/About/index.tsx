@@ -91,7 +91,7 @@ const About = () => {
                 </p>
                 <Link
                   to={section.href}
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105 cursor-pointer"
                 >
                   Learn More
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -118,76 +118,78 @@ to create positive change."
 
     
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {[
-              {
-                title: 'Leadership',
-                description: 'Developing strong, ethical leaders who inspire others.',
-                icon: Star,
-                color: 'text-amber-500'
-              },
-              {
-                title: 'Excellence',
-                description: 'Striving for the highest standards in everything we do.',
-                icon: Award,
-                color: 'text-blue-500'
-              },
-              {
-                title: 'Service',
-                description: 'Contributing to the betterment of our communities.',
-                icon: Users,
-                color: 'text-green-500'
-              },
-              {
-                title: 'Global',
-                description: 'Building international connections and understanding.',
-                icon: Globe,
-                color: 'text-purple-500'
-              }
-            ].map((value, index) => (
-              <div key={index} className="text-center group">
-                <div className={`w-16 h-16 mx-auto mb-4 sm:mb-6 ${value.color} group-hover:scale-110 transition-transform duration-300`}>
-                  <value.icon className="w-full h-full" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
+         <>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+    {[
+      {
+        title: 'Leadership',
+        description: 'Developing strong, ethical leaders who inspire others.',
+        icon: Star,
+        color: 'text-amber-500'
+      },
+      {
+        title: 'Excellence',
+        description: 'Striving for the highest standards in everything we do.',
+        icon: Award,
+        color: 'text-blue-500'
+      },
+      {
+        title: 'Service',
+        description: 'Contributing to the betterment of our communities.',
+        icon: Users,
+        color: 'text-green-500'
+      },
+      {
+        title: 'Global',
+        description: 'Building international connections and understanding.',
+        icon: Globe,
+        color: 'text-purple-500'
+      }
+    ].map((value, index) => (
+      <div key={index} className="text-center group">
+        <div
+          className={`w-16 h-16 mx-auto mb-4 sm:mb-6 ${value.color} group-hover:scale-110 transition-transform duration-300`}
+        >
+          <value.icon className="w-full h-full" />
         </div>
+        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
+          {value.title}
+        </h3>
+        <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+          {value.description}
+        </p>
       </div>
+    ))}
+  </div>
 
-      {/* Call to Action */}
-      <div className="py-16 sm:py-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">
-            Ready to Join Our Mission?
-          </h2>
-          <p className="text-lg sm:text-xl text-blue-100 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
-            Become part of a network of young leaders who are making a difference in their communities and beyond.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 transform hover:scale-105"
-            >
-              Get in Touch
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
-              to="/Project"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-200"
-            >
-              View Projects
-            </Link>
-          </div>
-        </div>
+  {/* Call to Action */}
+  <div className="py-16 sm:py-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">
+        Ready to Join Our Mission?
+      </h2>
+      <p className="text-lg sm:text-xl text-blue-100 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
+        Become part of a network of young leaders who are making a difference in their communities and beyond.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Link
+          to="/contact"
+          className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 transform hover:scale-105"
+        >
+          Get in Touch
+          <ArrowRight className="ml-2 w-5 h-5" />
+        </Link>
+        <Link
+          to="/Project"
+          className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-200"
+        >
+          View Projects
+        </Link>
       </div>
     </div>
+  </div>
+</>
+ </div>
   );
 };
 
