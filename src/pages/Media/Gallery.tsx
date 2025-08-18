@@ -9,6 +9,8 @@ import pg1 from "../../assets/Images/Gallery/pg1.webp";
 import pg2 from "../../assets/Images/Gallery/pg2.webp";
 import eko from "../../assets/Images/Gallery/eko.jpg";
 import cp1 from "../../assets/Images/Gallery/cp1.jpg";
+import ps1 from "../../assets/videos//ps1.mp4";
+import pub1 from "../../assets/Images/Gallery/pub1.webp";
 
 // TypeScript interfaces
 interface MediaItem {
@@ -58,45 +60,45 @@ const Gallery = () => {
       id: 1,
       url: pg1,
       thumbnail: pg2, 
-      title: "Leadership Workshop 2024",
+      title: "April Buisness Metting",
       category: "leadership",
-      date: "2024-03-15",
+      date: "2025-04-15",
       location: "UNIBEN Campus",
-      description: "Annual leadership development workshop for young professionals",
+      description: "A gathering where parliamentary procedures are observed, LO matters are discussed, and theme sessions are explored.",
       type: 'image'
     },
     {
       id: 2,
       url: cp1,
       thumbnail: cp1,
-      title: "Community Service Initiative",
+      title: "JCINUNIBEN goes to school",
       category: "community",
       date: "2024-02-28",
       location: "Benin City",
-      description: "Community outreach program supporting local schools",
+      description: "An outreach initiative where members engage with secondary school students, inspiring them with leadership values, career guidance, and personal development skills.",
       type: 'image'
     },
     {
       id: 3,
       url: eko,
       thumbnail: eko,
-      title: "JCI Nigeria  Collegiate Conference",
+      title: "JCI Nigeria  Southern Conference",
       category: "events",
       date: "2025-07-01",
-      location: "Ibadan",
-      description: " Collegiateconference bringing together young leaders from across Nigeria",
+      location: "Lagos",
+      description: " A regional gathering that brings together young active memebers across Southern Nigeria to network, share ideas, and develop impactful leadership skills.",
       type: 'image'
     },
     {
       id: 4,
-      url: pg2,
-      thumbnail: pg2,
-      title: "Entrepreneurship Training",
+      url: ps1,
+      thumbnail: pub1,
+      title: "The Physical Public Speaking Masterclass Training",
       category: "training",
-      date: "2024-04-10",
+      date: "2025-08-01",
       location: "UNIBEN Campus",
-      duration: "2:30",
-      description: "Comprehensive training program for aspiring entrepreneurs",
+      duration: "9 seconds",
+      description: "An intensive training designed to equip jcin uniben memebers with the confidence, techniques, and stage presence needed to become effective communicators.",
       type: 'video'
     }
   ];

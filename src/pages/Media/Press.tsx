@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { Calendar, Clock, User, Search, Download, Share2, Eye, Globe, Award, Users, Target, ChevronDown, FileText } from 'lucide-react';
-import mc1 from "../../assets/Images/Gallery/cp1.jpg";
-import lw1 from "../../assets/Images/Gallery/lw.jpg";
-import jw1 from "../../assets/Images/Gallery/jciworld.webp";
-
+import SEOHead from '../../components/SEOHead';
+import mc1 from "../../assets/Images/Gallery/mc1.jpg";
+import lw1 from "../../assets/Images/Gallery/lw1.jpg";
+import ju99 from "../../assets/Images/Gallery/ju99.webp";
+import dean from "../../assets/Images/Gallery/dean.webp";
+import ebl from "../../assets/Images/Gallery/ebl.webp";
+import toyp from "../../assets/Images/Gallery/toyp.webp";
+import vis from "../../assets/Images/Gallery/vis.webp";
+import health from "../../assets/Images/Gallery/health.webp";
+import bus from "../../assets/Images/Gallery/bus.webp";
 interface PressRelease {
   id: number;
   title: string;
@@ -28,7 +34,7 @@ const Press = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const featuredSlides = [
-    { id: 1, title: "JCIN UNIBEN MEETS WITH NEW DEAN OF STUDENTS", image: jw1 },
+    { id: 1, title: "JCIN UNIBEN MEETS WITH NEW DEAN OF STUDENTS", image: ju99 },
     { id: 2, title: "JCIN UNIBEN HOSTS ANNUAL AWARDS CEREMONY", image: mc1 },
     { id: 3, title: "JCIN UNIBEN PARTICIPATES IN GREEN INITIATIVES", image: lw1 },
   ];
@@ -55,16 +61,16 @@ The JCIN UNIBEN delegation, led by Local Organization President [Insert Name], a
 
 The meeting focused on several key areas of collaboration:
 
-**Safety and Health Initiatives**
+Safety and Health Initiatives
 The delegation outlined JCIN UNIBEN's commitment to promoting campus safety and student health awareness programs. These initiatives align with the organization's global mission to address critical societal challenges while empowering young people to become active change agents.
 
-**Environmental Sustainability Projects**
+Environmental Sustainability Projects
 Discussions centered on joint environmental projects that would benefit the university community and surrounding areas. JCIN UNIBEN's environmental focus reflects the organization's dedication to sustainable development and climate action.
 
-**EBL 7.0 Event Preparations**
+EBL 7.0 Event Preparations
 A significant portion of the meeting was dedicated to discussing the upcoming EBL 7.0 Event, a flagship program designed to enhance leadership capabilities among university students. The Dean expressed strong support for the initiative and pledged the office's full cooperation in ensuring its success.
 
-**Student Development Programs**
+Student Development Programs
 Both parties explored opportunities for collaborative programs that would enhance student leadership development, entrepreneurship skills, and community engagement. These programs are designed to prepare students for meaningful careers and active citizenship.
 
 Professor Ekhaise welcomed the delegation warmly and expressed his appreciation for JCIN UNIBEN's continued commitment to student development and community service. He emphasized his office's readiness to support initiatives that align with the university's mission of academic excellence and character development.
@@ -73,17 +79,17 @@ Professor Ekhaise welcomed the delegation warmly and expressed his appreciation 
 
 The meeting concluded with both parties agreeing to establish regular communication channels and joint planning committees for upcoming initiatives. A follow-up meeting was scheduled to finalize details for the EBL 7.0 Event and other collaborative projects.
 
-**About JCIN UNIBEN**
+About JCIN UNIBEN
 Junior Chamber International Nigeria (JCIN) UNIBEN is the local chapter of the global JCI network at the University of Benin. The organization is dedicated to developing leadership skills, promoting entrepreneurship, and creating positive change in the university and broader community through various programs and initiatives.
 
-**About EBL 7.0**
+About EBL 7.0
 The Entrepreneurial Business Leadership (EBL) 7.0 Event is JCIN UNIBEN's flagship leadership development program, designed to equip students with essential business and leadership skills needed for success in today's competitive global economy.
 
 For more information about JCIN UNIBEN and upcoming events, please contact:
 Email: jcinuniben@gmail.com
 Phone: +234 09086138683
 
-**Media Contact:**
+Media Contact:
 JCIN UNIBEN Communications Team
 Email: media@jcinuniben.com
 Phone: +234 09086138683`,
@@ -92,8 +98,158 @@ Phone: +234 09086138683`,
       author: "JCIN UNIBEN Communications",
       readTime: "5 min read",
       tags: ["Leadership", "Partnership", "EBL 7.0", "University Relations"],
-      views: 1250,
-      image: "../../assets/Images/Press/ebl.jpg",
+      views: 250,
+      image: dean,
+      featured: true,
+      downloadable: true
+    },
+        {
+      id: 2,
+      title: "JCIN UNIBEN PAYS COURTESY VISIT TO VIISAUS",
+      summary: "JCIN UNIBEN secures Viisaus sponsorship for EBL 7.0 during a courtesy visit to Managing Partner Jiro Ejobe, reinforcing a longstanding partnership dedicated to youth empowerment.",
+      content: `BENIN CITY, Nigeria – August 8, 2025 – The Executive Council of Junior Chamber International Nigeria (JCIN) UNIBEN, accompanied by the Director of the Emerging Business Leaders (EBL) program, paid a courtesy visit to Mr. Jiro Ejobe, Managing Partner and Founder of Viisaus, in Benin City. The visit further strengthened the longstanding partnership between JCIN UNIBEN and Viisaus, securing vital sponsorship for the upcoming Employability, Business, and Leadership Master Class 7.0 (EBL 7.0).
+
+Led by the Local Organization President, the delegation expressed deep appreciation for Viisaus’ consistent support over the years, acknowledging the positive impact of the company’s contributions on the organization’s growth and project delivery. Special recognition was extended to Madam Stella Obialor, Chief Operations Officer of Viisaus, for her outstanding service and commitment as a valuable resource person for JCIN UNIBEN.
+
+During the meeting, the Director of EBL presented the proposal for EBL 7.0, highlighting its objectives of equipping young people with essential skills in employability, entrepreneurship, and leadership. The proposal received high praise from Mr. Ejobe, who commended JCIN UNIBEN for its vision and professionalism.
+
+In a show of continued commitment, Mr. Ejobe confirmed Viisaus’ sponsorship of EBL 7.0, underscoring the company’s belief in the transformative impact of youth empowerment programs.
+
+“We are truly grateful for Viisaus’ unwavering support and investment in our vision,” said the Local Organization President. “Their partnership continues to fuel our ability to deliver impactful programs that prepare young people for success in leadership, business, and career development.”
+
+The visit concluded with a renewed sense of collaboration and a shared commitment to advancing youth development in Benin City and beyond.`,
+      date: "2025-08-08",
+      category: "partnerships",
+      author: "JCIN UNIBEN Communications",
+      readTime: "3 min read",
+      tags: ["jcinuniben", "youthempowerment", "ourlegacy", "ascend", "elv8", "jcinigeriacollegiate", "jcinigeria", "jci", "courtesyvisit", "ebl7.0", "viisaus"],
+      views: 150,
+      image: vis,
+      featured: true,
+      downloadable: true
+    },
+            {
+      id: 3,
+      title: "JCIN UNIBEN PAYS A COURTESY VISIT TO THE HONOURABLE COMMISSIONER FOR HEALTH, EDO STATE",
+      summary: "JCIN UNIBEN’s leadership meets with Edo State Commissioner for Health to discuss collaboration on youth empowerment and leadership initiatives, with a focus on the upcoming EBL 7.0 Master Class.",
+      content: `BENIN CITY, Nigeria – August 8, 2025 – The Executive Council of Junior Chamber International Nigeria (JCIN) UNIBEN, accompanied by the Director of the Emerging Business Leaders (EBL) program, paid a courtesy visit to the Honourable Commissioner for Health, Edo State, Hon. Dr. Cyril Adams Oshiomole. The engagement strengthened ties between the organization and the Ministry of Health, with a shared commitment to youth empowerment, capacity building, and community development.
+
+The Commissioner warmly received the delegation as the Local Organization President presented JCIN UNIBEN’s mission, values, and impact story, spotlighting the organization’s dedication to leadership development, entrepreneurship, and community service.
+
+A key highlight of the visit was the presentation of the Employability, Business, and Leadership Master Class 7.0 (EBL 7.0), scheduled for later this year. The President emphasized the program’s objectives, which include equipping young people with practical skills, fostering entrepreneurship, and developing leadership capacity to meet the demands of a competitive economy.
+
+The Local Organization Secretary praised the Commissioner for his exemplary leadership and acknowledged the positive transformations his initiatives have brought to the Edo State health sector. The General Legal Counsel further outlined how EBL 7.0 aligns with the Ministry’s health objectives, particularly in the areas of youth development and capacity building for healthcare-related entrepreneurship and leadership.
+
+In his response, the Honourable Commissioner commended JCIN UNIBEN for its consistent contribution to youth and community development. He expressed his full support for the Master Class, noting its potential to nurture a generation of leaders equipped to make significant contributions to the healthcare sector and beyond.
+
+The visit concluded with mutual agreement to explore future collaborations between JCIN UNIBEN and the Ministry of Health, aimed at advancing youth empowerment initiatives and expanding healthcare-focused leadership training in Edo State.`,
+      date: "2025-08-08",
+      category: "partnerships",
+      author: "JCIN UNIBEN Communications",
+      readTime: "3 min read",
+      tags: ["jcinuniben", "youthempowerment", "ourlegacy", "ascend", "StudentLeadership", "jcinigeriacollegiate", "jcinigeria", "jci", "courtesyvisit", "ebl7.0", "EdoState"],
+      views: 150,
+      image: health,
+      featured: true,
+      downloadable: true
+    },
+     {
+      id: 4,
+      title: "NOMINATIONS FOR THE UNIBEN TEN OUTSTANDING YOUNG PERSONS AWARD IS OPEN",
+      summary: "JCIN UNIBEN opens nominations for the Ten Outstanding Young Persons (TOYP) Award 2025, recognizing exceptional changemakers at the University of Benin who embody excellence, leadership, and impact. Nominations are open until September 15, with the award ceremony set for October 2025.",
+      content: `BENIN CITY, Nigeria – August 9, 2025 – JCI UNIBEN has officially opened nominations for the prestigious Ten Outstanding Young Persons (TOYP) Award, an annual recognition program that celebrates the achievements and impact of exceptional young changemakers within the University of Benin community.
+
+The TOYP Award honors ten individuals, aged 18–40, who have demonstrated excellence in various fields including academic leadership, entrepreneurship, cultural achievement, environmental advocacy, personal improvement, and humanitarian service.
+
+“This is more than an award; it’s a platform to spotlight and inspire the next wave of leaders at UNIBEN,” said JCIN UNIBEN Local President [Praise Ewere]. “We want to celebrate those who are not only excelling in their craft but are also driving positive change.”
+
+The award program is guided by three pillars:
+
+Recognition of Impact – Highlighting stories of young people whose achievements have created lasting influence in the university and beyond.
+
+Inspiration Through Legacy – Encouraging others to rise to their full potential by showcasing role models whose journeys embody excellence, service, and leadership.
+
+Sustainable Change – Connecting honorees to mentorship and leadership opportunities within JCI’s global network to scale their positive contributions.
+
+Nomination Details:
+
+Who can nominate? Any student, faculty member, or alumni of UNIBEN.
+
+Who can be nominated? Individuals aged 18–40 who are part of the UNIBEN community and have made significant contributions in one or more categories.
+
+How to nominate? Submit nominations online at https://toyp.jcinuniben.com.
+
+Past TOYP honorees have gone on to represent UNIBEN at national and international platforms, securing partnerships, scholarships, and leadership opportunities.
+
+Nominations close September 15, 2025, with the award ceremony set to take place in October 2025 at the University of Benin Main Auditorium.
+
+“This is the moment to celebrate those who raise the bar with talent and with grace,” added TOYP Director UNIBEN [Deborah Obelawo]. “If it’s YOU or your FRIEND, step into that place!”
+
+For more details, visit https://toyp.jcinuniben.com or contact the JCIN UNIBEN Secretariat.`,
+      date: "2025-08-08",
+      category: "awards",
+      author: "JCIN UNIBEN Communications",
+      readTime: "3 min read",
+      tags: ["TOYPUNIBEN2025", "JCINUNIBEN", "OutstandingYoungPersons", "StudentImpact", "Leadership", "Excellence" ,"Changemakers", "PositiveChange", "UNIBEN"],
+      views: 150,
+      image: toyp,
+      featured: true,
+      downloadable: true
+    },
+
+    {
+      id: 5,
+      title: "Date Unveiled",
+      summary: "JCIN UNIBEN announces August 23, 2025, as the date for the EBL 7.0 Grand Finale, a landmark event focused on leadership, business, and personal development.",
+      content: `BBENIN CITY, Nigeria – [15-07-07] – Junior Chamber International Nigeria (JCIN) UNIBEN has officially announced the date for the highly anticipated Employability, Business, and Leadership (EBL) Master Class 7.0 Grand Finale, set to take place on Saturday, August 23, 2025 at the University of Benin’s prestigious Akin Deko Auditorium.
+
+The event promises one day, one stage, and unforgettable moments, bringing together students, young professionals, entrepreneurs, and industry leaders for a transformational experience in leadership, business, and personal growth.
+
+Event Details:
+📅 Date: Saturday, 23rd August 2025
+⏰ Time: 9:00 AM (Red Carpet) | 10:00 AM (Main Event)
+🧭 Venue: Akin Deko Auditorium, University of Benin
+🔗 Updates: Join the WhatsApp group
+
+“This year’s grand finale is not just an event—it’s the culmination of months of training, mentorship, and collaboration,” said [Insert Name], Local Organization President of JCIN UNIBEN. “We are ready to showcase the next generation of leaders and changemakers.”
+
+The EBL 7.0 Grand Finale will feature keynote speeches, panel discussions, award presentations, and networking opportunities, reinforcing JCIN UNIBEN’s mission to equip young people with the skills to thrive in a dynamic world.`,
+      date: "2025-08-08",
+      category: "Events & Programs",
+      author: "JCIN UNIBEN Communications",
+      readTime: "2 min read",
+      tags: ["ebl7", "ourlegacy", "ascend", "elv8", "jcinuniben", "jcinigeriacollegiate", "jcinigeria", "jci", "leadership", "business"],
+      views: 150,
+      image: ebl,
+      featured: true,
+      downloadable: true
+    },
+        {
+      id: 6,
+      title: "Support the JCIN UNIBEN Bus Project with Just ₦1,000!",
+      summary: "Fundraising drive inviting members, alumni, and supporters to contribute ₦1,000 or more towards the purchase of a bus for jcinuniben, aimed at boosting mobility and enhancing project delivery.",
+      content: `
+Do you know that you can help jcinuniben buy a bus with just ₦1,000?
+
+Yes — your kind support will go a long way in helping us achieve this dream. 🙏
+
+Together, we can make something beautiful happen.
+
+📌 Please send your donation to:
+🏧 Account Number: 6230221708
+🏦 Bank: Fidelity Bank
+💳 Account Name: Junior Chamber International
+📝 Narration: JCIN UNIBEN Bus Project
+
+💙 Thank you so much for believing in us!
+One Goal! One Bus! One Big Impact!`,
+      date: "2025-08-02",
+      category: "Community Impact",
+      author: "JCIN UNIBEN Communications",
+      readTime: "2 min read",
+      tags: ["jcinunibenbusproject", "ourlegacy", "ascend", "elv8", "jcinigeriacollegiate", "jcinigeria", "jci",],
+      views: 50,
+      image: bus,
       featured: true,
       downloadable: true
     },
@@ -136,7 +292,7 @@ Phone: +234 09086138683`,
           {featuredSlides.map((slide, index) => (
             <div
               key={slide.id}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
+              className={`absolute inset-0 transition-opacity duration-700 ${
                 currentSlide === index ? 'opacity-100' : 'opacity-0'
               }`}
             >
@@ -173,7 +329,7 @@ Phone: +234 09086138683`,
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-200 ${
                 currentSlide === index ? 'bg-jcin-yellow w-6 sm:w-8' : 'bg-white/50 hover:bg-white/70'
               }`}
             />
@@ -243,11 +399,11 @@ Phone: +234 09086138683`,
       {/* Image Section */}
      <div className="relative h-48 sm:h-56 overflow-hidden">
   {/* Display the release image */}
-  {/* <img
+  {<img
     src={release.image}
     alt={release.title}
-    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-  /> */}
+    className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+  /> }
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         <div className="absolute bottom-4 left-4 right-4">

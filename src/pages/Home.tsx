@@ -5,6 +5,8 @@ import ekodun from "../assets/Images/111/ekodun.webp";
 import health from "../assets/Images/112/health.webp";
 import bm from "../assets/Images/111/bm.webp";
 import praiseImg from "../assets/Images/board1/praise.jpg";
+import ige from "../assets/Images/Gallery/ige.webp";
+import odey from "../assets/Images/Gallery/odey.webp";
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -31,17 +33,17 @@ const Home = () => {
   ];
   const testimonials = [
     {
-      name: "Adebayo Johnson",
-      role: "Global Leadership Fellow",
-      image: "/api/placeholder/120/120",
-      text: "JCIN UNIBEN transformed my leadership journey and connected me with opportunities across five continents.",
+      name: "EMMANUEL IGE",
+      role: "2024 Executive Vice President JCIN UNIBEN, CEO of Explicit Online Tutorial",
+      image: ige,
+      text: "Joining JCIN UNIBEN in my 100 level was the best decision I made to grow as a leader, professional, and person beyond academics.",
       rating: 5
     },
     {
-      name: "Chioma Okwu",
-      role: "Social Impact Director",
+      name: "TESTIMONY ODEY",
+      role: odey,
       image: "/api/placeholder/120/120",
-      text: "The global network and mentorship here is unparalleled. I've launched three successful initiatives.",
+      text: "Despite thinking I wouldn't fit in, joining JCIN UNIBEN turned out to be one of my best decisions as it gave me opportunities to grow, perform, connect, and thrive beyond my creative expectations.",
       rating: 5
     },
     {
@@ -143,7 +145,7 @@ const Home = () => {
               Transform Your <span className="bg-gradient-to-r from-jcin-light-blue to-jcin-dark-blue bg-clip-text text-transparent">Future</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-4xl mx-auto px-4">
-              Four pillars of excellence designed to elevate young leaders to global prominence
+              Four core part of jcinuniben designed to elevate young students to prominence leaders
             </p>
           </div>
           
@@ -151,22 +153,22 @@ const Home = () => {
             {[
               {
                 title: "Individual Development",
-                description: "Personalized leadership coaching and skill development programs",
+                description: "Upskill yourself at your own pace through comprehensive training programs, workshops, and mentorship opportunities.",
                 icon: Target
               },
               {
-                title: "Business Excellence",
-                description: "Entrepreneurship support and global market opportunities",
+                title: "Business and Entrepreneurship",
+                description: "Stand out not just as a student but also as an exceptional entrepreneur with our business development programs.",
                 icon: Award
               },
               {
-                title: "International Network",
-                description: "Connect with leaders across 120+ countries worldwide",
+                title: "International Cooperation",
+                description: "International Cooperation",
                 icon: Globe
               },
               {
                 title: "Community Impact",
-                description: "Lead sustainable development projects locally and globally",
+                description: "Execute community projects and lay your impact in communities around you while building your legacy.",
                 icon: Users
               }
             ].map((category, index) => (

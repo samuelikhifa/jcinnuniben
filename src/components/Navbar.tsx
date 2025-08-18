@@ -14,6 +14,7 @@ import {
   ChevronRight,
   Search
 } from 'lucide-react';
+import logo from "../assets/Images/Gallery/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -79,11 +80,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo - Mobile Optimized */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12  rounded-full flex items-center justify-center flex-shrink-0">
               <img 
-                src="/images/logo/jci-logo.png" 
-                alt="JCI Nigeria UNIBEN Logo"
-                className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-full object-cover"
+      src={logo} 
+      alt="JCI Nigeria UNIBEN Logo"
+              className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 object-cover rounded-none"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
@@ -95,8 +96,8 @@ const Navbar = () => {
               </div>
             </div>
             <div className="text-white min-w-0">
-              <div className="font-bold text-sm sm:text-lg lg:text-xl leading-tight">JCIN UNIBEN</div>
-              <div className="text-xs text-blue-200 hidden sm:block leading-tight">Leadership & Excellence</div>
+              {/* <div className="font-bold text-sm sm:text-lg lg:text-xl leading-tight">JCIN UNIBEN</div> */}
+              {/* <div className="text-xs text-blue-200 hidden sm:block leading-tight">Leadership & Excellence</div> */}
             </div>
           </div>
 

@@ -15,8 +15,8 @@ import {
 import SEOHead from '../components/SEOHead';
 
 import b1 from "../assets/Images/Gallery/b1.webp";
-import lw from "../assets/Images/Gallery/lw.jpg";
-import lw2 from "../assets/Images/Gallery/lw2.jpg";
+import tt from "../assets/Images/Gallery/tt.webp";
+import ju12 from "../assets/Images/Gallery/ju12.webp";
 
 // TypeScript interfaces
 interface KeyProject {
@@ -126,8 +126,8 @@ const Project: React.FC = () => {
 
   const featuredSlides = [
     { id: 1, title: "TOYP Excellence Framework", image: b1 },
-    { id: 2, title: "Student Entrepreneurship ", image: lw },
-    { id: 3, title: "Community Impact Initiative", image: lw2 },
+    { id: 2, title: "Student Entrepreneurship ", image: tt },
+    { id: 3, title: "Community Impact Initiative", image: ju12 },
   ];
 
   const keyProjects: KeyProject[] = [

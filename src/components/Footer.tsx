@@ -5,7 +5,7 @@ import {
   MapPin, 
   ChevronRight 
 } from 'lucide-react';
-
+import logo from "../assets/Images/Gallery/logo.png";
 const Footer = () => {
   return (
     <footer className="bg-black text-white">
@@ -14,15 +14,19 @@ const Footer = () => {
           {/* Organization Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <div className="w-10 h-10 bg-jcin-dark-blue rounded-full flex items-center justify-center text-white font-bold text-sm">
-                  JCI
+              <div className="w-12 h-12  flex items-center justify-center">
+                <div className="w-10 h-10  flex items-center justify-center">
+                   <img 
+      src={logo} 
+      alt="JCI Nigeria UNIBEN Logo"
+                    className="w-8 h-8 rounded-full object-cover"
+                  />
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <div className="font-bold text-xl">JCIN UNIBEN</div>
                 <div className="text-gray-400 text-sm">Leadership Excellence</div>
-              </div>
+              </div> */}
             </div>
             <p className="text-gray-300 leading-relaxed mb-6">
               Junior Chamber International UNIBEN is a leadership organization for students committed to creating positive change within and beyond the University of Benin.
