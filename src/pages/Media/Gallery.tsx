@@ -9,7 +9,7 @@ import pg1 from "../../assets/Images/Gallery/pg1.webp";
 import pg2 from "../../assets/Images/Gallery/pg2.webp";
 import eko from "../../assets/Images/Gallery/eko.jpg";
 import cp1 from "../../assets/Images/Gallery/cp1.jpg";
-import ps1 from "../../assets/videos//ps1.mp4";
+import ps1 from "../../assets/videos/ps1.mp4";
 import pub1 from "../../assets/Images/Gallery/pub1.webp";
 
 // TypeScript interfaces
