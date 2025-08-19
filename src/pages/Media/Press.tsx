@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Calendar, Clock, User, Search, Download, Share2, Eye, Globe, Award, Users, Target, ChevronDown, FileText } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
-import mc1 from "../../assets/Images/Gallery/mc1.jpg";
+import lc from "../../assets/Images/Gallery/lc.webp";
 import lw1 from "../../assets/Images/Gallery/lw1.jpg";
 import ju99 from "../../assets/Images/Gallery/ju99.webp";
 import dean from "../../assets/Images/Gallery/dean.webp";
@@ -35,7 +35,7 @@ const Press = () => {
 
   const featuredSlides = [
     { id: 1, title: "JCIN UNIBEN MEETS WITH NEW DEAN OF STUDENTS", image: ju99 },
-    { id: 2, title: "JCIN UNIBEN HOSTS ANNUAL AWARDS CEREMONY", image: mc1 },
+    { id: 2, title: "JCIN UNIBEN HOSTS ANNUAL AWARDS CEREMONY", image: lc },
     { id: 3, title: "JCIN UNIBEN PARTICIPATES IN GREEN INITIATIVES", image: lw1 },
   ];
 
