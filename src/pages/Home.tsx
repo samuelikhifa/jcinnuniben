@@ -340,15 +340,16 @@ const Home = () => {
           <div className="relative max-w-5xl mx-auto px-4">
             <div className="relative aspect-video rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group">
               <iframe
-                width="100%"
-                height="100%"
-                src="https://youtu.be/Q00T4ZB8fYg?si=F-29r-T4VHGsg9qi"
-                title="JCIN UNIBEN Impact Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-105"
-              ></iframe>
+  width="100%"
+  height="100%"
+  src="https://www.youtube.com/embed/Q00T4ZB8fYg?si=F-29r-T4VHGsg9qi"
+  title="JCIN UNIBEN Impact Video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  className="absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-105"
+></iframe>
+
               <div className="absolute inset-0 border-2 sm:border-4 border-jcin-yellow/20 rounded-2xl sm:rounded-3xl pointer-events-none"></div>
             </div>
             <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-jcin-light-blue/20 to-jcin-dark-blue/20 rounded-2xl sm:rounded-3xl blur-lg sm:blur-xl -z-10 group-hover:blur-xl sm:group-hover:blur-2xl transition-all duration-300"></div>
