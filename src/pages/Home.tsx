@@ -342,7 +342,7 @@ const Home = () => {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src="https://youtu.be/Q00T4ZB8fYg?si=F-29r-T4VHGsg9qi"
                 title="JCIN UNIBEN Impact Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
