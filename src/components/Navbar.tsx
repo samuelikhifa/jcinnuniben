@@ -50,7 +50,7 @@ const Navbar = () => {
       icon: Users,
       items: [
         { label: 'JCIN UNIBEN Overview', href: '/about/Jcinunibenverview' },
-        { label: 'Vision, Mission & Values', href: '/about/Jcivision' },
+        { label: 'Vision,  & Mission', href: '/about/Jcivision' },
       ]
     },
     media: {
@@ -232,17 +232,17 @@ const Navbar = () => {
             {/* Mobile Menu Header */}
             <div className="flex items-center justify-between p-4 border-b border-blue-600">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                <div className="w-10 h-10  flex items-center justify-center">
                   <img 
-                    src="/images/logo/jci-logo.png" 
+                    src={logo} 
                     alt="JCI Nigeria UNIBEN Logo"
-                    className="w-8 h-8 rounded-full object-cover"
+                    className="w-8 h-8 object-cover"
                   />
                 </div>
-                <div className="text-white">
+                {/* <div className="text-white">
                   <div className="font-bold text-lg">JCIN UNIBEN</div>
                   <div className="text-sm text-blue-200">Leadership & Excellence</div>
-                </div>
+                </div> */}
               </div>
               <button
                 onClick={closeMenu}

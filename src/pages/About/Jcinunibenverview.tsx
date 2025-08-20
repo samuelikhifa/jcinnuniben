@@ -45,7 +45,7 @@ const Jcinunibenverview = () => {
 
   const milestones = [
     {
-      year: "2020",
+      year: "1980",
       title: "Foundation",
       description: "JCIN UNIBEN was established with a vision to empower young leaders at the University of Benin."
     },
@@ -56,18 +56,23 @@ const Jcinunibenverview = () => {
     },
     {
       year: "2022",
-      title: "Growth & Recognition",
-      description: "Expanded membership and received recognition for outstanding community impact."
-    },
-    {
-      year: "2023",
-      title: "National Impact",
-      description: "Extended our reach beyond campus borders to create positive change nationwide."
+      title: "TOYP UNIBEN",
+      description: "Adopted the Ten Outstanding Young Person Award Under the leadership of the 2022 President, Olu-waseyi Odebode."
     },
     {
       year: "2024",
-      title: "Global Connections",
-      description: "Established international partnerships and expanded our global network."
+      title: "JCIN UNIBEN Ekehuan",
+      description: "Extended our reach beyond to Ekehuan campus borders to create positive change."
+    },
+    {
+      year: "2024",
+      title: "Best Local Community Impact Project",
+      description: "Won the best local Community impact Project_ Leadership Academy."
+    },
+    {
+      year: "2025",
+      title: "Miss Collegiate",
+      description: "Won the first ever miss collegiate award."
     }
   ];
 

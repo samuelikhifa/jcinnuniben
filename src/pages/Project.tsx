@@ -373,8 +373,12 @@ const Project: React.FC = () => {
 
           {/* Call to Action */}
           
-          <section className="text-center bg-gradient-to-br from-jcin-yellow via-jcin-yellow to-jcin-yellow p-6 sm:p-8 lg:p-12 text-jcin-black w-full -mx-4 sm:-mx-6 lg:-mx-8 mt-12 sm:mt-16 lg:mt-20">
-            
+          {/* <section className="text-center bg-gradient-to-br from-jcin-yellow via-jcin-yellow to-jcin-yellow p-6 sm:p-8 lg:p-12 text-jcin-black w-full -mx-4 sm:-mx-6 lg:-mx-8 mt-12 sm:mt-16 lg:mt-20"> */}
+          <section className="text-center bg-gradient-to-br from-jcin-yellow via-jcin-yellow to-jcin-yellow p-6 sm:p-8 lg:p-12 text-jcin-black w-screen relative left-1/2 right-1/2 -translate-x-1/2 m-0">
+
+
+
+            {/* <div className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-jcin-yellow via-jcin-yellow to-jcin-yellow text-jcin-black"> */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 sm:mb-8 leading-tight">
               Ready to Make an <span className="text-white">Impact?</span>
             </h2>
@@ -398,6 +402,7 @@ const Project: React.FC = () => {
               </button>
               </Link>
             </div>
+            {/* </div> */}
           </section>
         </div>
       </div>
