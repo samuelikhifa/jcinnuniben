@@ -4,6 +4,7 @@ import {
   Calendar,
   CheckCircle
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import ps from "../../assets/Images/Gallery/ps.jpg";
 import bm1 from "../../assets/Images/111/bm1.webp";
 import otsImg from "../../assets/Images/Gallery/ots.jpg";
@@ -310,11 +311,12 @@ const Jcinunibenverview = () => {
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
               </span>
             </button>
-            
+             <Link to="/project">
             <button className="group w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 border-2 border-jcin-black text-jcin-black font-bold text-lg sm:text-xl rounded-full hover:bg-jcin-black hover:text-white transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 sm:gap-3">
               <Calendar className="w-5 h-5 sm:w-6 sm:h-6" />
-              View Events
+              View Project
             </button>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto">

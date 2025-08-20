@@ -21,11 +21,13 @@ import visionImg from "../../assets/Images/112/vision.webp";
 import ps4 from "../../assets/Images/Gallery/ps4.webp";
 import ps8 from "../../assets/Images/Gallery/ps8.webp";
 import ps5 from "../../assets/Images/Gallery/ps5.webp";
+import RegistrationForm from '../../components/RegistrationForm';
 
 const Jcivision = () => {
   const [activeSection, setActiveSection] = useState('vision');
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState({});
+    const [showRegistrationForm, setShowRegistrationForm] = useState(false);
 
   // Hero slides for Vision & Mission page
   const slides = [
@@ -34,21 +36,21 @@ const Jcivision = () => {
       subtitle: "Guiding Principles That Drive Our Impact",
       description: "Discover the core beliefs and aspirations that shape our commitment to developing young leaders and creating positive community change.",
       image: ps4,
-      cta: "Explore Our Vision"
+      // cta: "Explore Our Vision"
     },
     {
       title: "Our Vision",
       subtitle: "Be the Foremost Global Network of Young Leaders",
       description: "Setting the standard for leadership excellence, global recognition, and sustainable community impact worldwide.",
       image: ps8,
-      cta: "Learn More"
+      // cta: "Learn More"
     },
     {
       title: "Our Mission", 
       subtitle: "Empowering Young Leaders for Positive Change",
       description: "Providing leadership development opportunities that transform passionate youth into capable changemakers.",
       image: ps5,
-      cta: "See Our Impact"
+      // cta: "See Our Impact"
     }
   ];
 
@@ -125,13 +127,7 @@ const Jcivision = () => {
           
           {/* Mobile-first button alignment - left aligned on mobile */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:justify-center items-start sm:items-center px-0 sm:px-4">
-            <button className="group relative w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-jcin-yellow to-jcin-yellow text-jcin-black font-bold text-base sm:text-lg rounded-full shadow-2xl hover:shadow-jcin-yellow/30 transition-all duration-300 hover:scale-105 transform">
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                {slides[currentSlide].cta}
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-jcin-yellow/80 to-jcin-yellow/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
+            
             
             <div className="flex gap-3 sm:gap-4">
               <button 
@@ -283,17 +279,19 @@ const Jcivision = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12">
-            <button className="group relative w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-jcin-black text-white font-bold text-lg sm:text-xl rounded-full shadow-2xl hover:shadow-jcin-black/30 transition-all duration-300 hover:scale-105 transform">
+            <button  onClick={() => setShowRegistrationForm(true)}
+            className="group relative w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-jcin-black text-white font-bold text-lg sm:text-xl rounded-full shadow-2xl hover:shadow-jcin-black/30 transition-all duration-300 hover:scale-105 transform">
               <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
                 Join Our Community
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
               </span>
             </button>
-            
+            {/* <Link> */}
             <button className="group w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 border-2 border-jcin-black text-jcin-black font-bold text-lg sm:text-xl rounded-full hover:bg-jcin-black hover:text-white transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 sm:gap-3">
               <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
               Explore Programs
             </button>
+            {/* <Link> */}
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
@@ -310,7 +308,15 @@ const Jcivision = () => {
           </div>
         </div>
       </div>
+    {/* </div> */}
+ {/* Registration Form Modal */}
+      <RegistrationForm 
+        isOpen={showRegistrationForm}
+        onClose={() => setShowRegistrationForm(false)}
+      />
     </div>
+
+
   );
 };
 

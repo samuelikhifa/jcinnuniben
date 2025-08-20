@@ -5,10 +5,12 @@ import ekodun from "../assets/Images/111/ekodun.webp";
 import health from "../assets/Images/112/health.webp";
 import bm from "../assets/Images/111/bm.webp";
 import praiseImg from "../assets/Images/board1/praise.jpg";
+import pub1Img from "../assets/Images/Gallery/pub1.webp";
 import ige from "../assets/Images/Gallery/ige.webp";
 import odey from "../assets/Images/Gallery/odey.webp";
 import  noel from "../assets/Images/board1/noel.webp";
 import RegistrationForm from '../components/RegistrationForm';
+import PersonalDevelopment from "../components/PersonalDevelopment";
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -31,7 +33,8 @@ const Home = () => {
       title: "Creating Positive Change",
       subtitle: "Join the largest collegiate JCI chapter in Nigeria and make your mark",
       image: health,
-      cta: "Learn More"
+      cta: "Join Now",
+
     }
   ];
   const testimonials = [
@@ -119,6 +122,8 @@ const Home = () => {
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-jcin-yellow/80 to-jcin-yellow/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
+           
+
             
             <button className="group w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-white/10 backdrop-blur-sm text-white font-semibold text-base sm:text-lg rounded-full border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 transform">
               <Play className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -158,9 +163,10 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
-                title: "Individual Development",
+                title: "Personal Development",
                 description: "Upskill yourself at your own pace through comprehensive training programs, workshops, and mentorship opportunities.",
-                icon: Target
+                icon: Target,
+                link: "/PersonalDevelopment" // 👈 route to page
               },
               {
                 title: "Business and Entrepreneurship",
@@ -184,7 +190,7 @@ const Home = () => {
               >
                 <div className="absolute inset-0">
                   <img 
-                    src="https://via.placeholder.com/400x300" 
+                    src={pub1Img}
                     alt={category.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -198,9 +204,11 @@ const Home = () => {
                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 group-hover:text-jcin-yellow transition-colors duration-300 leading-tight">{category.title}</h3>
                     <p className="text-white/90 text-xs sm:text-sm leading-relaxed">{category.description}</p>
                   </div>
-                  <button className="self-start mt-4 sm:mt-6 flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all hover:text-jcin-yellow text-sm sm:text-base">
+
+                  <Link
+          to={category.link} className="self-start mt-4 sm:mt-6 flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all hover:text-jcin-yellow text-sm sm:text-base">
                     Learn More <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                    </Link>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               </div>
@@ -230,7 +238,7 @@ const Home = () => {
               <div>
                 <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-jcin-yellow mb-4 sm:mb-6" />
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-jcin-black mb-4 sm:mb-6 leading-tight">
-                  Leading the <span className="bg-gradient-to-r from-jcin-light-blue to-jcin-dark-blue bg-clip-text text-transparent">Our Legacy</span> Movement
+                  Leading the <span className="bg-gradient-to-r from-jcin-light-blue to-jcin-white bg-clip-text text-transparent">Our Legacy</span> Movement
                 </h2>
               </div>
               

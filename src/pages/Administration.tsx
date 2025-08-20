@@ -8,6 +8,8 @@ import {
   Twitter,
   Instagram,
 } from "lucide-react";
+
+import RegistrationForm from '../components/RegistrationForm';
 import SEOHead from "../components/SEOHead";
 import r77 from "../assets/Images/Gallery/r77.webp";
 import ots from "../assets/Images/Gallery/ots.jpg";
@@ -70,7 +72,7 @@ interface Achievement {
 const Administration = () => {
   const [activeTab, setActiveTab] = useState("current");
   const [currentSlide, setCurrentSlide] = useState(0);
-
+const [showRegistrationForm, setShowRegistrationForm] = useState(false);
   const featuredSlides = [
     { id: 1, title: "Meet Our Leadership Team", image: r77 },
     { id: 2, title: "Driving Positive Change", image: ots },
@@ -676,17 +678,18 @@ const Administration = () => {
         <div className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-jcin-yellow via-jcin-yellow to-jcin-yellow text-jcin-black">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 sm:mb-8 leading-tight">
-              Ready to <span className="text-jcin-white">Join Our Team?</span>
+              Ready to <span className="text-jcin-white">Join Our Organisation</span>
             </h2>
             <p className="text-lg sm:text-xl font-light mb-8 sm:mb-12 max-w-3xl mx-auto opacity-90 leading-relaxed">
-              Become part of a leadership team that's making a real difference
+              Become part of those that's making a real difference
               in our community and beyond.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <button className="group relative w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-jcin-black text-jcin-white font-bold text-lg rounded-full shadow-2xl hover:shadow-jcin-black/30 transition-all duration-300 hover:scale-105 transform">
+              <button  onClick={() => setShowRegistrationForm(true)}
+              className="group relative w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-jcin-black text-jcin-white font-bold text-lg rounded-full shadow-2xl hover:shadow-jcin-black/30 transition-all duration-300 hover:scale-105 transform">
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  Apply for Leadership
+                  Join Now
                   <Users className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </button>
@@ -698,7 +701,14 @@ const Administration = () => {
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
+       {/* Registration Form Modal */}
+      <RegistrationForm 
+        isOpen={showRegistrationForm}
+        onClose={() => setShowRegistrationForm(false)}
+      />
+    </div>
+
     </>
   );
 };

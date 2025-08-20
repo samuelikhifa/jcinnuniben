@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import PersonalDevelopment from "./components/PersonalDevelopment";
 import Home from "./pages/Home";
+
 import About from "./pages/About";
 import Jcinunibenverview from "./pages/About/Jcinunibenverview";
 import Jcivision from "./pages/About/Jcivision";
@@ -22,6 +24,9 @@ const App: React.FC = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+
+            <Route path="/PersonalDevelopment" element={<PersonalDevelopment />} />
+
             <Route path="/about" element={<About />} />
             <Route
               path="/about/Jcinunibenverview"

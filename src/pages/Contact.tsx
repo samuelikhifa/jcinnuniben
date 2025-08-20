@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { 
   Phone, Mail, MapPin, Send, ArrowRight, CheckCircle,
   Facebook, Twitter, Instagram, Linkedin, Youtube,
-  Clock
+  // Clock
 } from 'lucide-react';
 import RegistrationForm from '../components/RegistrationForm';
-
+import ju8 from "../assets/Images/Gallery/ju8.webp";
+import pe11 from "../assets/Images/Gallery/pe11.webp";
+import oli1 from "../assets/Images/Gallery/oli1.webp";
 // TypeScript interfaces
 interface FormData {
   firstName: string;
@@ -36,21 +38,21 @@ const Contact: React.FC = () => {
   const featuredSlides = [
     {
       id: 1,
-      title: "Connect with JCI Nigeria",
+      title: "Connect with JCIN UNIBEN",
       subtitle: "Join a community of young leaders making a difference",
-      image: "https://via.placeholder.com/1200x600/003da5/ffffff?text=Connect+with+JCI"
+      image: ju8,
     },
     {
       id: 2,
       title: "Get Involved Today",
       subtitle: "Discover opportunities to lead, learn, and grow",
-      image: "https://via.placeholder.com/1200x600/ffc20e/000000?text=Get+Involved"
+      image: pe11,
     },
     {
       id: 3,
       title: "Shape Nigeria's Future",
       subtitle: "Be part of the change you want to see",
-      image: "https://via.placeholder.com/1200x600/26A69A/ffffff?text=Shape+the+Future"
+      image: oli1,
     }
   ];
 
@@ -109,9 +111,9 @@ const Contact: React.FC = () => {
               <img 
                 src={slide.image} 
                 alt={slide.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-full object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-jcin-light-blue to-jcin-dark-blue opacity-90"></div>
+           
               <div className="absolute inset-0 bg-black/20"></div>
             </div>
           ))}
@@ -333,17 +335,8 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 sm:gap-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-jcin-yellow" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-jcin-white mb-1 text-sm sm:text-base">Office Hours</div>
-                      <div className="text-blue-100 text-sm sm:text-base">Monday - Friday: 9:00 AM - 5:00 PM</div>
-                      <div className="text-blue-100 text-sm sm:text-base">Saturday: 10:00 AM - 2:00 PM</div>
-                    </div>
-                  </div>
-                </div>
+               
+                </div> 
               </div>
             </div>
           </div>
@@ -364,30 +357,32 @@ const Contact: React.FC = () => {
 
           <div className="space-y-4 sm:space-y-6">
             {[
+              
               {
-                question: "How can I become a member of JCI Nigeria?",
-                answer: "Membership is open to individuals aged 18-40 who demonstrate leadership potential and commitment to community development. You can apply through our website or contact your nearest local chapter."
-              },
-              {
-                question: "What programs does JCI Nigeria offer?",
-                answer: "We offer leadership development programs, community service projects, business networking opportunities, international exchange programs, and the prestigious TOYP awards program."
-              },
-              {
-                question: "How can my organization partner with JCI Nigeria?",
-                answer: "We welcome partnerships with organizations that share our vision of developing young leaders. Contact our partnership team at partnerships@jcinigeria.org to explore collaboration opportunities."
-              },
-              {
-                question: "Do you offer international opportunities?",
-                answer: "Yes! JCI Nigeria provides various international opportunities including exchange programs, global conferences, leadership training abroad, and cross-cultural collaboration projects."
-              },
-              {
-                question: "How can I nominate someone for the TOYP Awards?",
-                answer: "TOYP nominations open annually in September. Visit our website for nomination criteria and application forms, or contact our awards committee for more information."
-              },
-              {
-                question: "What is the ELV8 theme about?",
-                answer: "ELV8 represents our 2025 theme focused on elevating leadership in four key areas: Individual Development, Business Excellence, International Network, and Community Impact."
-              }
+  question: "How can I become a member of JCIN UNIBEN?",
+  answer: "Membership is open to University of Benin students who are committed to leadership development, community impact, and personal growth. You can apply through our registration portal or connect with our recruitment team on campus."
+},
+{
+  question: "What programs does JCIN UNIBEN offer?",
+  answer: "We provide leadership training sessions, campus and community service projects, entrepreneurial and business development opportunities, networking platforms, and the prestigious TOYP UNIBEN awards program."
+},
+{
+  question: "How can my organization partner with JCIN UNIBEN?",
+  answer: "We welcome collaborations with organizations and brands that share our vision of empowering young leaders. Reach out to our partnership team at partnerships@jcinuniben.com to explore opportunities."
+},
+{
+  question: "Do you offer international opportunities?",
+  answer: "Yes! As a local chapter of JCI, JCIN UNIBEN members enjoy access to international conferences, exchange programs, leadership academies, and global networking opportunities."
+},
+{
+  question: "How can I nominate someone for the TOYP UNIBEN Awards?",
+  answer: "TOYP UNIBEN nominations open annually. Visit our website for eligibility details and application guidelines, or contact the awards committee for more information."
+},
+{
+  question: "What is the Our Legacy theme about?",
+  answer: "Our Legacy is the 2025 theme of JCIN UNIBEN. It emphasizes building on the strong foundation of past leaders while inspiring present members to create lasting impact in four key areas:Personal Development, Business & Entrepreneurship, Community Action, International Cooperation."
+}
+
             ].map((faq, index) => (
               <div key={index} className="bg-slate-50 rounded-2xl p-4 sm:p-6 hover:bg-slate-100 transition-colors">
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 sm:mb-3 flex items-center gap-2">

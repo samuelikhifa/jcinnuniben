@@ -12,6 +12,7 @@ import {
   Heart,
   Share2,
 } from "lucide-react";
+import { Link } from 'react-router-dom';
 import SEOHead from "../components/SEOHead";
 import RegistrationForm from "../components/RegistrationForm";
 
@@ -113,11 +114,6 @@ const KeyProjectCard: React.FC<KeyProjectCardProps> = ({ project }) => {
             </ul>
           </div>
 
-          {/* Action Button */}
-          {/* <button className="group flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-jcin-light-blue to-jcin-dark-blue text-white font-semibold rounded-lg hover:from-jcin-dark-blue hover:to-jcin-light-blue transition-all duration-300 transform hover:scale-105">
-            Learn More
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button> */}
         </div>
       </div>
     </div>
@@ -321,16 +317,19 @@ const Project: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-center items-start sm:items-center px-0 sm:px-4">
+               <Link to="/project">
               <button className="group relative w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-jcin-yellow to-jcin-yellow text-jcin-black font-bold text-base sm:text-lg rounded-full shadow-2xl hover:shadow-jcin-yellow/30 transition-all duration-300 hover:scale-105 transform">
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   Explore Our Impact
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </button>
-
+              </Link>
+ <Link to="/media/Gallery">
               <button className="group w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-jcin-white/10 backdrop-blur-sm text-jcin-white font-semibold text-base sm:text-lg rounded-full border-2 border-jcin-white/20 hover:bg-jcin-white/20 hover:border-jcin-white/40 transition-all duration-300 hover:scale-105 transform">
                 View Gallery
               </button>
+              </Link>
             </div>
           </div>
 
@@ -373,7 +372,9 @@ const Project: React.FC = () => {
           </section>
 
           {/* Call to Action */}
+          
           <section className="text-center bg-gradient-to-br from-jcin-yellow via-jcin-yellow to-jcin-yellow p-6 sm:p-8 lg:p-12 text-jcin-black w-full -mx-4 sm:-mx-6 lg:-mx-8 mt-12 sm:mt-16 lg:mt-20">
+            
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 sm:mb-8 leading-tight">
               Ready to Make an <span className="text-white">Impact?</span>
             </h2>
@@ -391,9 +392,11 @@ const Project: React.FC = () => {
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </button>
+               <Link to="/about/Jcinunibenverview">
               <button className="group w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 border-2 border-jcin-black text-jcin-black font-semibold text-base sm:text-lg rounded-full hover:bg-jcin-black hover:text-white transition-all duration-300 hover:scale-105 transform">
                 Learn More
               </button>
+              </Link>
             </div>
           </section>
         </div>
