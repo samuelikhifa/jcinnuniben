@@ -12,7 +12,7 @@ const About = () => {
       color: 'from-blue-500 to-indigo-600'
     },
     {
-      title: 'Vision, Mission & Values',
+      title: 'Vision & Mission',
       description: 'Discover our core principles, goals, and the values that drive our leadership development programs.',
       icon: Target,
       href: '/about/Jcivision',
@@ -20,12 +20,12 @@ const About = () => {
     }
   ];
 
-  const stats = [
-    { number: '500+', label: 'Active Members' },
-    { number: '50+', label: 'Projects Completed' },
-    { number: '10+', label: 'Years of Excellence' },
-    { number: '100%', label: 'Leadership Focus' }
-  ];
+  // const stats = [
+  //   { number: '500+', label: 'Active Members' },
+  //   { number: '50+', label: 'Projects Completed' },
+  //   { number: '10+', label: 'Years of Excellence' },
+  //   { number: '100%', label: 'Leadership Focus' }
+  // ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-16">
@@ -39,7 +39,7 @@ const About = () => {
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto px-4 leading-relaxed">
               Empowering young leaders to create positive change through leadership development, 
-              community service, and global networking opportunities.
+              community service, and networking opportunities.
             </p>
           </div>
         </div>
@@ -140,8 +140,8 @@ to create positive change."
         color: 'text-green-500'
       },
       {
-        title: 'Global',
-        description: 'Building international connections and understanding.',
+        title: 'Impact',
+        description: 'Building connections and understanding.',
         icon: Globe,
         color: 'text-purple-500'
       }

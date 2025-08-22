@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { 
   Search, Download, Share2, Heart, 
-  Calendar, MapPin, Clock, X, Play,
-  Grid, List
+  Calendar, MapPin, Clock, Play, 
+  Grid, List, 
+  // X 
 } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
 import pg1 from "../../assets/Images/Gallery/pg1.webp";
@@ -37,7 +38,7 @@ const Gallery = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [selectedMedia, setSelectedMedia] = useState<MediaItem | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  // const [isPlaying, setIsPlaying] = useState(false);
   const [likedItems, setLikedItems] = useState<Set<number>>(new Set());
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -130,10 +131,10 @@ const Gallery = () => {
   };
 
   // Close modal
-  const closeModal = () => {
-    setSelectedMedia(null);
-    setIsPlaying(false);
-  };
+  // const closeModal = () => {
+  //   setSelectedMedia(null);
+  //   setIsPlaying(false);
+  // };
 
   return (
     <>
@@ -341,12 +342,12 @@ const Gallery = () => {
                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 pr-4">
                   {selectedMedia.title}
                 </h2>
-                <button
+                {/* <button
                   onClick={closeModal}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0"
                 >
                   <X className="w-6 h-6" />
-                </button>
+                </button> */}
               </div>
               
               {/* Content */}

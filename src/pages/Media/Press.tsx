@@ -35,8 +35,8 @@ const Press = () => {
 
   const featuredSlides = [
     { id: 1, title: "JCIN UNIBEN MEETS WITH NEW DEAN OF STUDENTS", image: ju99 },
-    { id: 2, title: "JCIN UNIBEN HOSTS ANNUAL AWARDS CEREMONY", image: lc },
-    { id: 3, title: "JCIN UNIBEN PARTICIPATES IN GREEN INITIATIVES", image: lw1 },
+    { id: 2, title: "JCIN UNIBEN UNVEILED DATE FOR EBL", image: lc },
+    { id: 3, title: "JCIN UNIBEN PARTICIPATES IN INTERNATIONAL HUMAN DUTIES DAY", image: lw1 },
   ];
 
   const categories = [

@@ -1,6 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Play, Globe, Users, Target, Award, ArrowRight, Star, Quote, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import LazyImage from '../components/LazyImage';
+import LazyYouTube from '../components/LazyYouTube';
+
+// Lazy load heavy components
+const RegistrationForm = lazy(() => import('../components/RegistrationForm'));
+const PersonalDevelopment = lazy(() => import('../components/PersonalDevelopment'));
+
+// Lazy load images
 import ekodun from "../assets/Images/111/ekodun.webp";
 import health from "../assets/Images/112/health.webp";
 import bm from "../assets/Images/111/bm.webp";
@@ -8,9 +16,8 @@ import praiseImg from "../assets/Images/board1/praise.jpg";
 import pub1Img from "../assets/Images/Gallery/pub1.webp";
 import ige from "../assets/Images/Gallery/ige.webp";
 import odey from "../assets/Images/Gallery/odey.webp";
-import  noel from "../assets/Images/board1/noel.webp";
-import RegistrationForm from '../components/RegistrationForm';
-import PersonalDevelopment from "../components/PersonalDevelopment";
+import noel from "../assets/Images/board1/noel.webp";
+
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -20,7 +27,7 @@ const Home = () => {
     {
       title: "We are the Young Enterprises",
       subtitle: "Developing leaders, empowering minds, creating global impact.",
-      image: ekodun, // ✅ now using imported variable, no quotes
+      image: ekodun, 
       cta: "Register Now"
     },
     {
@@ -74,6 +81,7 @@ const Home = () => {
     }, 4000);
     return () => clearInterval(testimonialInterval);
   }, []);
+
 
   return (
    <div className="bg-slate-50 text-slate-900 font-sans overflow-x-hidden">
@@ -166,22 +174,29 @@ const Home = () => {
                 title: "Personal Development",
                 description: "Upskill yourself at your own pace through comprehensive training programs, workshops, and mentorship opportunities.",
                 icon: Target,
-                link: "/PersonalDevelopment" // 👈 route to page
+                link: "/PersonalDevelopment",
+                image: health
               },
               {
                 title: "Business and Entrepreneurship",
                 description: "Stand out not just as a student but also as an exceptional entrepreneur with our business development programs.",
-                icon: Award
+                icon: Award,
+                link: "/business",
+                image: bm
               },
               {
                 title: "International Cooperation",
-                description: "International Cooperation",
-                icon: Globe
+                description: "Connect with global JCI networks and participate in international programs that broaden your perspective.",
+                icon: Globe,
+                link: "/international",
+                image: ekodun
               },
               {
                 title: "Community Impact",
                 description: "Execute community projects and lay your impact in communities around you while building your legacy.",
-                icon: Users
+                icon: Users,
+                link: "/community",
+                image: pub1Img
               }
             ].map((category, index) => (
               <div
@@ -189,10 +204,11 @@ const Home = () => {
                 className="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 transform"
               >
                 <div className="absolute inset-0">
-                  <img 
-                    src={pub1Img}
+                  <LazyImage
+                    src={category.image}
                     alt={category.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500"></div>
                 </div>
@@ -205,10 +221,14 @@ const Home = () => {
                     <p className="text-white/90 text-xs sm:text-sm leading-relaxed">{category.description}</p>
                   </div>
 
-                  <Link
-          to={category.link} className="self-start mt-4 sm:mt-6 flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all hover:text-jcin-yellow text-sm sm:text-base">
-                    Learn More <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+                  {category.link && (
+                    <Link
+                      to={category.link}
+                      className="self-start mt-4 sm:mt-6 flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all hover:text-jcin-yellow text-sm sm:text-base"
+                    >
+                      Learn More <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
+                  )}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               </div>
@@ -285,7 +305,7 @@ const Home = () => {
                   }`}
                 >
                   <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 text-center">
-                    <img
+                    <LazyImage
                       src={testimonial.image}
                       alt={testimonial.name}
                       className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full mx-auto mb-6 sm:mb-8 border-4 border-jcin-yellow shadow-xl"
@@ -324,7 +344,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       {/* Video Section */}
       <div className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-jcin-light-blue to-jcin-dark-blue text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -333,23 +352,17 @@ const Home = () => {
               Experience Our Impact
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto px-4">
-              Discover how JCIN UNIBEN is transforming lives and communities across the globe
+              Discover how JCIN UNIBEN is transforming lives and communities across UNIBEN
             </p>
           </div>
           
           <div className="relative max-w-5xl mx-auto px-4">
             <div className="relative aspect-video rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group">
-              <iframe
-  width="100%"
-  height="100%"
-  src="https://www.youtube.com/embed/Q00T4ZB8fYg?si=F-29r-T4VHGsg9qi"
-  title="JCIN UNIBEN Impact Video"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-  className="absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-105"
-></iframe>
-
+              <LazyYouTube
+                videoId="Q00T4ZB8fYg"
+                title="JCIN UNIBEN Impact Video"
+                className="absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-105"
+              />
               <div className="absolute inset-0 border-2 sm:border-4 border-jcin-yellow/20 rounded-2xl sm:rounded-3xl pointer-events-none"></div>
             </div>
             <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-jcin-light-blue/20 to-jcin-dark-blue/20 rounded-2xl sm:rounded-3xl blur-lg sm:blur-xl -z-10 group-hover:blur-xl sm:group-hover:blur-2xl transition-all duration-300"></div>
@@ -387,7 +400,7 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {[
-              "Global networking opportunities",
+              "Networking opportunities",
               "Leadership development programs",
               "Mentorship from industry experts"
             ].map((benefit, index) => (
@@ -401,10 +414,41 @@ const Home = () => {
       </div>
 
       {/* Registration Form Modal */}
-      <RegistrationForm 
-        isOpen={showRegistrationForm}
-        onClose={() => setShowRegistrationForm(false)}
-      />
+      <Suspense fallback={
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-8 animate-pulse">
+            <div className="h-6 bg-gray-200 rounded mb-4 w-48"></div>
+            <div className="h-4 bg-gray-200 rounded mb-2 w-32"></div>
+            <div className="h-4 bg-gray-200 rounded mb-4 w-24"></div>
+            <div className="h-10 bg-gray-200 rounded w-full"></div>
+          </div>
+        </div>
+      }>
+        {showRegistrationForm && (
+          <RegistrationForm 
+            isOpen={showRegistrationForm}
+            onClose={() => setShowRegistrationForm(false)}
+          />
+        )}
+      </Suspense>
+      {/* Lazy load PersonalDevelopment component */}
+      <Suspense fallback={
+        <div className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="animate-pulse">
+              <div className="h-8 bg-gray-200 rounded mb-4 w-64 mx-auto"></div>
+              <div className="h-4 bg-gray-200 rounded mb-8 w-96 mx-auto"></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="h-48 bg-gray-200 rounded"></div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      }>
+        {/* <PersonalDevelopment /> */}
+      </Suspense>
     </div>
   );
 };

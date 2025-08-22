@@ -21,25 +21,25 @@ const Jcinunibenverview = () => {
   // Hero slides for JCIN UNIBEN Overview
   const slides = [
     {
-      title: "JCIN UNIBEN Overview",
+      title: "Welcome to JCIN UNIBEN",
       subtitle: "Empowering Young Leaders at the University of Benin",
       description: "A dynamic community of young professionals and students dedicated to creating positive change through leadership development, community service, and international cooperation.",
       image: ps,
-      cta: "Learn More"
+      // cta: "Learn More"
     },
     {
       title: "Leadership Excellence",
-      subtitle: "Building Tomorrow's Global Leaders",
+      subtitle: "Building Tomorrow's Leaders",
       description: "Join the largest collegiate JCI chapter in Nigeria and develop the skills needed to make a lasting impact.",
       image: bm1,
-      cta: "Join Us"
+      // cta: "Join Us"
     },
     {
-      title: "Global Network",
-      subtitle: "Connecting Leaders Worldwide",
-      description: "Be part of a worldwide network of young leaders across 120+ countries creating positive change.",
+      title: " Network opportunities",
+      subtitle: "Connecting Exceptional Student",
+      description: "Be part of a  network of young leaders UNIBEN creating positive change.",
       image: fb7,
-      cta: "Get Connected"
+      // cta: "Get Connected"
     }
   ];
 
@@ -122,18 +122,18 @@ const Jcinunibenverview = () => {
           
           {/* Mobile-first button alignment - left aligned on mobile */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:justify-center items-start sm:items-center px-0 sm:px-4">
-            <button className="group relative w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-jcin-yellow to-jcin-yellow text-jcin-black font-bold text-base sm:text-lg rounded-full shadow-2xl hover:shadow-jcin-yellow/30 transition-all duration-300 hover:scale-105 transform">
+            {/* <button className="group relative w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-jcin-yellow to-jcin-yellow text-jcin-black font-bold text-base sm:text-lg rounded-full shadow-2xl hover:shadow-jcin-yellow/30 transition-all duration-300 hover:scale-105 transform">
               <span className="relative z-10 flex items-center justify-center gap-2">
                 {slides[currentSlide].cta}
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-jcin-yellow/80 to-jcin-yellow/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
+            </button> */}
             
-            <button className="group w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-white/10 backdrop-blur-sm text-white font-semibold text-base sm:text-lg rounded-full border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 transform">
+            {/* <button className="group w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-white/10 backdrop-blur-sm text-white font-semibold text-base sm:text-lg rounded-full border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 transform">
               <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               View Events
-            </button>
+            </button> */}
           </div>
         </div>
         
@@ -327,7 +327,7 @@ const Jcinunibenverview = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
             {[
               "Personal development programs",
-              "Global networking opportunities", 
+              "Networking opportunities", 
               "Community impact projects"
             ].map((benefit, index) => (
               <div key={index} className="flex items-center justify-center gap-2 sm:gap-3 text-jcin-black font-semibold text-sm sm:text-base">

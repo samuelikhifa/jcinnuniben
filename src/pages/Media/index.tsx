@@ -37,7 +37,7 @@ const Media: React.FC = () => {
                 Photo Gallery
               </h3>
               <p className="text-gray-600 text-lg mb-6">
-                Browse through our collection of photos capturing memorable moments, events, and achievements of JCI.
+                Browse through our collection of photos capturing memorable moments, events, and achievements of JCIN UNIBEN.
               </p>
               <Link
                 to="/media/Gallery"
@@ -88,7 +88,7 @@ const Media: React.FC = () => {
               Media Inquiries
             </h2>
             <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
-              For media inquiries, press releases, or to request interviews with JCI representatives, 
+              For media inquiries, press releases, or to request interviews with JCIN UNIBEN representatives, 
               please contact our media team. We're here to help journalists and media professionals 
               get the information they need.
             </p>

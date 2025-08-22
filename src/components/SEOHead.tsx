@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 
 interface SEOHeadProps {
   title?: string;
@@ -23,9 +23,34 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   noIndex = false,
   canonicalUrl
 }) => {
-  const fullTitle = title.includes('JCI Nigeria') ? title : `${title} | JCI Nigeria UNIBEN`;
-  const fullUrl = url.startsWith('http') ? url : `https://jcinigeria-uniben.org${url}`;
-  const fullImage = image.startsWith('http') ? image : `https://jcinigeria-uniben.org${image}`;
+  // Memoize computed values to prevent unnecessary recalculations
+  const { fullTitle, fullUrl, fullImage, structuredDataJson } = useMemo(() => {
+    const computedTitle = title.includes('JCI Nigeria') ? title : `${title} | JCI Nigeria UNIBEN`;
+    const computedUrl = url.startsWith('http') ? url : `https://jcinigeria-uniben.org${url}`;
+    const computedImage = image.startsWith('http') ? image : `https://jcinigeria-uniben.org${image}`;
+    
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "JCI Nigeria UNIBEN",
+      "description": description,
+      "url": computedUrl,
+      "logo": computedImage,
+      "sameAs": [
+        "https://facebook.com/jcinigeria.uniben",
+        "https://twitter.com/jcinigeria_uniben",
+        "https://instagram.com/jcinigeria.uniben",
+        "https://linkedin.com/company/jci-nigeria-uniben"
+      ]
+    };
+    
+    return {
+      fullTitle: computedTitle,
+      fullUrl: computedUrl,
+      fullImage: computedImage,
+      structuredDataJson: JSON.stringify(structuredData)
+    };
+  }, [title, description, url, image]);
 
   useEffect(() => {
     // Update document title
@@ -88,21 +113,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       (structuredData as HTMLScriptElement).type = 'application/ld+json';
       document.head.appendChild(structuredData);
     }
-    structuredData.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "JCI Nigeria UNIBEN",
-      "description": description,
-      "url": fullUrl,
-      "logo": fullImage,
-      "sameAs": [
-        "https://facebook.com/jcinigeria.uniben",
-        "https://twitter.com/jcinigeria_uniben",
-        "https://instagram.com/jcinigeria.uniben",
-        "https://linkedin.com/company/jci-nigeria-uniben"
-      ]
-    });
-  }, [fullTitle, description, keywords, author, fullImage, fullUrl, type, noIndex, canonicalUrl]);
+    structuredData.textContent = structuredDataJson;
+  }, [fullTitle, description, keywords, author, fullImage, fullUrl, type, noIndex, canonicalUrl, structuredDataJson]);
 
   return null;
 };

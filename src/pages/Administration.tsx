@@ -24,11 +24,11 @@ import aaron from "../assets/Images/board1/aaron.webp";
 import efosa from "../assets/Images/board1/efosa.webp";
 // import  bless from "../assets/Images/board1/bless.webp";
 import fanny from "../assets/Images/board1/fanny.webp";
-import adatang from "../assets/Images/board1/adatang.webp";
+// import adatang from "../assets/Images/board1/adatang.webp";
 import favy from "../assets/Images/board1/favy.webp";
 import eze from "../assets/Images/board1/eze.webp";
 import eseosa from "../assets/Images/board1/eseosa.webp";
-import jude from "../assets/Images/board1/jude.webp";
+// import jude from "../assets/Images/board1/jude.webp";
 import erons from "../assets/Images/board1/erons.webp";
 import olivia from "../assets/Images/board1/olivia.webp";
 import efe from "../assets/Images/board1/efe.webp";
@@ -412,26 +412,26 @@ const [showRegistrationForm, setShowRegistrationForm] = useState(false);
     //   twitter: "#"
     // }
     // },
-    {
-      id: 34,
-      name: "Jude Onose ",
-      position: "Fund Raising Committee ( Bus Project) Memeber",
-      image: jude,
-      social: {
-        linkedin: "#",
-        twitter: "#",
-      },
-    },
-    {
-      id: 35,
-      name: " Marvellous Adatang ",
-      position: "Fund Raising Committee ( Bus Project) Memeber",
-      image: adatang,
-      social: {
-        linkedin: "#",
-        twitter: "#",
-      },
-    },
+    // {
+    //   id: 34,
+    //   name: "Jude Onose ",
+    //   position: "Fund Raising Committee ( Bus Project) Memeber",
+    //   image: jude,
+    //   social: {
+    //     linkedin: "#",
+    //     twitter: "#",
+    //   },
+    // },
+    // {
+    //   id: 35,
+    //   name: " Marvellous Adatang ",
+    //   position: "Fund Raising Committee ( Bus Project) Memeber",
+    //   image: adatang,
+    //   social: {
+    //     linkedin: "#",
+    //     twitter: "#",
+    //   },
+    // },
     //     {
     //   id: 36,
     //   name: " Favour Charles,  ",

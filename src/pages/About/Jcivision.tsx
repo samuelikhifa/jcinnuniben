@@ -41,7 +41,7 @@ const Jcivision = () => {
     {
       title: "Our Vision",
       subtitle: "Be the Foremost Global Network of Young Leaders",
-      description: "Setting the standard for leadership excellence, global recognition, and sustainable community impact worldwide.",
+      description: "Setting the standard for leadership excellence and sustainable community impact across UNIBEN.",
       image: ps8,
       // cta: "Learn More"
     },
@@ -297,7 +297,7 @@ const Jcivision = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {[
               "Values-driven leadership development",
-              "Global network of like-minded leaders",
+              "Networking with like-minded leaders",
               "Meaningful community impact projects"
             ].map((benefit, index) => (
               <div key={index} className="flex items-center justify-center gap-2 sm:gap-3 text-jcin-black font-semibold text-sm sm:text-base">

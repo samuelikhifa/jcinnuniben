@@ -17,113 +17,114 @@ export interface SEOConfig {
 
 // Base SEO configuration for JCI Nigeria
 export const baseSEO: SEOConfig = {
-  title: "JCI Nigeria - Junior Chamber International Nigeria",
-  description: "Join JCI Nigeria, the leading global network of young active citizens age 18-40 who share the belief that in order to create positive change, we must take collective action to improve ourselves and the world around us.",
-  keywords: [
-    "JCI Nigeria",
-    "Junior Chamber International",
-    "Young Leaders",
-    "Leadership Development",
-    "Youth Empowerment",
-    "Nigeria",
-    "Community Development",
-    "Entrepreneurship",
-    "Professional Development",
-    "Networking",
-    "TOYP",
-    "Ten Outstanding Young Persons",
-    "Social Impact",
-    "Civic Engagement"
-  ],
-  ogType: "website",
-  ogImage: "/images/jci-nigeria-og-image.jpg",
-  twitterCard: "summary_large_image",
-  structuredData: {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "JCI Nigeria",
-    "alternateName": "Junior Chamber International Nigeria",
-    "url": "https://jcinigeria.org",
-    "logo": "https://jcinigeria.org/images/jci-nigeria-logo.png",
-    "description": "Leading global network of young active citizens in Nigeria focused on leadership development and community impact.",
-    "foundingDate": "1960",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "Nigeria",
-      "addressRegion": "Lagos",
-      "addressLocality": "Lagos"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+234-xxx-xxx-xxxx",
-      "contactType": "customer service",
-      "email": "info@jcinigeria.org"
-    },
-    "sameAs": [
-      "https://www.facebook.com/JCINigeria",
-      "https://www.twitter.com/JCINigeria",
-      "https://www.instagram.com/JCINigeria",
-      "https://www.linkedin.com/company/jci-nigeria",
-      "https://www.youtube.com/JCINigeria"
-    ]
-  }
+  title: "JCIN UNIBEN - Junior Chamber International UNIBEN",
+description: "Join JCIN UNIBEN, the first collegiate chapter in the world, a network of young active students of the University of Benin, who share the belief that in order to create positive change, we must take collective action to improve ourselves and the communities around us.",
+keywords: [
+  "JCIN UNIBEN",
+  "Junior Chamber International UNIBEN",
+  "Young Leaders",
+  "Leadership Development",
+  "Youth Empowerment",
+  "University of Benin",
+  "Community Development",
+  "Entrepreneurship",
+  "Professional Development",
+  "Networking",
+  "TOYP",
+  "Ten Outstanding Young Persons",
+  "Social Impact",
+  "Civic Engagement"
+],
+ogType: "website",
+ogImage: "/images/jcin-uniben-og-image.jpg",
+twitterCard: "summary_large_image",
+structuredData: {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JCIN UNIBEN",
+  "alternateName": "Junior Chamber International UNIBEN",
+  "url": "https://jcinuniben.com",
+  "logo": "https://jcinuniben.com/images/jcin-uniben-logo.png",
+  "description": "Leading global network of young active citizens at the University of Benin focused on leadership development and community impact.",
+  "foundingDate": "1980",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Nigeria",
+    "addressRegion": "Ugbowo",
+    "addressLocality": "Benin City"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+234-xxx-xxx-xxxx",
+    "contactType": "customer service",
+    "email": "info@jcinuniben.com"
+  },
+  "sameAs": [
+    "https://www.facebook.com/jcinuniben",
+    "https://www.twitter.com/jcinuniben",
+    "https://www.instagram.com/jcinuniben",
+    "https://www.linkedin.com/company/jcin-uniben",
+    "https://www.youtube.com/@jcinuniben"
+  ]
+}
 };
 
 // Page-specific SEO configurations
 export const pageSEO: Record<string, Partial<SEOConfig>> = {
   home: {
-    title: "JCI Nigeria - Empowering Young Leaders Across Nigeria",
-    description: "Join Nigeria's premier youth leadership organization. Connect with 18-40 year old active citizens creating positive change through leadership development, entrepreneurship, and community impact.",
-    keywords: ["JCI Nigeria homepage", "youth leadership Nigeria", "young professionals network"],
+    title: "JCIN UNIBEN - Empowering Young Leaders Across UNIBEN",
+    description: "Join JCIN UNIBEN's organization. Connect with active students creating positive change through leadership development, entrepreneurship, and community impact.",
+    keywords: ["JCIN UNIBEN homepage", "young professionals network"],
     structuredData: {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "JCI Nigeria",
-      "url": "https://jcinigeria.org",
+      "name": "JCIN UNIBEN",
+      "url": "https://jcinuniben.com",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://jcinigeria.org/search?q={search_term_string}",
+        "target": "https://jcinuniben.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
   },
   about: {
-    title: "About JCI Nigeria - Our Mission, Vision & Impact",
-    description: "Learn about JCI Nigeria's 60+ year legacy of developing young leaders. Discover our mission to create positive change through active citizenship and leadership development programs.",
-    keywords: ["about JCI Nigeria", "JCI history", "leadership organization Nigeria"],
+    title: "About JCIN UNIBEN - Our Mission, Vision & Impact",
+    description: "Learn about JCIN UNIBEN's legacy of developing young leaders. Discover our mission to create positive change through active citizenship and leadership development programs.",
+    keywords: ["about JCIN UNIBEN", "JCIN UNIBEN history", "leadership organization UNIBEN"],
     ogType: "article"
   },
   projects: {
-    title: "JCI Nigeria Projects - Leadership & Community Development Initiatives",
-    description: "Explore JCI Nigeria's impactful projects including TOYP Excellence Framework, Youth Entrepreneurship Programs, and community development initiatives across Nigeria and Africa.",
-    keywords: ["JCI Nigeria projects", "TOYP", "youth entrepreneurship", "community development"],
+    title: "JCIN UNIBEN Projects - Leadership & Community Development Initiatives",
+    description: "Explore JCIN UNIBEN's impactful projects including TOYP Award, EBL Programs, and community development initiatives across UNIBEN and beyond.",
+    keywords: ["JCIN UNIBEN projects", "TOYP", "student entrepreneurship", "community development"],
     ogType: "article",
     structuredData: {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "JCI Nigeria Projects",
-      "description": "Leadership and community development projects by JCI Nigeria",
+      "name": "JCIN UNIBEN Projects",
+      "description": "Leadership and community development projects by JCIN UNIBEN",
       "numberOfItems": 5
     }
   },
   contact: {
-    title: "Contact JCI Nigeria - Get Involved & Connect",
-    description: "Ready to join Nigeria's leading youth organization? Contact JCI Nigeria to learn about membership, partnerships, and opportunities to make a difference in your community.",
-    keywords: ["contact JCI Nigeria", "join JCI", "membership inquiry", "partnership opportunities"],
+    title: "Contact JCIN UNIBEN - Get Involved & Connect",
+    description: "Ready to join UNIBEN's leading youth organization? Contact JCIN UNIBEN to learn about membership, partnerships, and opportunities to make a difference in your community.",
+    keywords: ["contact JCIN UNIBEN", "join JCIN UNIBEN", "membership inquiry", "partnership opportunities"],
     ogType: "article"
   },
   blog: {
-    title: "JCI Nigeria Blog - Leadership Insights & Community Stories",
-    description: "Stay updated with the latest leadership insights, success stories, and community impact news from JCI Nigeria. Read about youth development and active citizenship.",
-    keywords: ["JCI Nigeria blog", "leadership articles", "youth development", "success stories"],
+    title: "JCIN UNIBEN Blog - Leadership Insights & Community Stories",
+    description: "Stay updated with the latest leadership insights, success stories, and community impact news from JCIN UNIBEN. Read about youth development and active citizenship.",
+    keywords: ["JCIN UNIBEN blog", "leadership articles", "youth development", "success stories"],
     ogType: "blog"
   },
   press: {
-    title: "JCI Nigeria Press & Media - News, Awards & Recognition",
-    description: "Latest press releases, media coverage, and recognition of JCI Nigeria's impact. Discover our awards, achievements, and media presence in leadership development.",
-    keywords: ["JCI Nigeria press", "media coverage", "awards", "recognition"],
+    title: "JCIN UNIBEN Press & Media - News, Awards & Recognition",
+    description: "Latest press releases, media coverage, and recognition of JCIN UNIBEN's impact. Discover our awards, achievements, and media presence in leadership development.",
+    keywords: ["JCIN UNIBEN press", "media coverage", "awards", "recognition"],
     ogType: "article"
   }
+
 };
 
 // SEO utility functions
